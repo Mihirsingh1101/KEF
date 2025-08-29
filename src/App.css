@@ -1,38 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Zodiak:wght@400;500;600&display=swap');
+
+/* CSS Variables for Brand Colors */
+:root {
+  --kef-cream: #f9f5e9;
+  --kef-brown: #5a2e0f;
+  --kef-orange: #f9a825;
+  --kef-red: #f44336;
+  --kef-beige: #e8dcc0;
+  --kef-mud: #8b4513;
+  --kef-light-brown: #d2b48c;
+  --kef-dark-cream: #f0e6d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Zodiak', serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--kef-cream);
+  color: var(--kef-brown);
+  overflow-x: hidden;
+}
+
 .App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  position: relative;
 }
 
-.App-link {
-  color: #61dafb;
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rye', serif;
+  font-weight: normal;
+}
+
+p, span, div, a, li {
+  font-family: 'Zodiak', serif;
+  font-weight: 400;
+}
+
+/* Global Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
+}
+
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
 }

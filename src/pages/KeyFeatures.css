@@ -1,0 +1,325 @@
+.key-features {
+  --kef-cream: #f9f5e9;
+  --kef-brown: #5a2e0f;
+  --kef-orange: #f9a825;
+  --kef-red: #f44336;
+  
+  --mobile--w: 280px;
+  --mobile--h: 400px;
+  --outline-w: 6px;
+  --preview-bg: var(--kef-cream);
+
+  padding: 4rem 0;
+  background: var(--kef-cream);
+  background-image: 
+    radial-gradient(circle at 15% 85%, rgba(249, 168, 37, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 85% 15%, rgba(244, 67, 54, 0.08) 0%, transparent 50%);
+  position: relative;
+  overflow: hidden;
+}
+
+.key-features::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('../assets/key features.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  opacity: 0.03;
+  z-index: 0;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  color: var(--kef-brown);
+  font-family: 'Rye', serif;
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+}
+
+.title-underline {
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(90deg, var(--kef-orange), var(--kef-red));
+  margin: 0.5rem auto 0;
+  border-radius: 2px;
+}
+
+.card__container {
+  display: flex;
+  flex-wrap: wrap;
+  place-items: center;
+  place-content: center;
+  gap: 2rem;
+  min-height: 500px;
+}
+
+/* Fade out other cards when one is hovered/focused */
+.card__container:has(.animated-card:hover, .animated-card:focus) .animated-card:not(:hover, :focus) {
+  opacity: 0.4;
+}
+
+.animated-card {
+  --bg-pos-y--start: 0;
+  --bg-pos-y--end: 0;
+  --bg-pos-y: var(--bg-pos-y--start);
+  --delay: 0;
+  --duration: 4s;
+  --shadow-blur: 20px;
+  --shadow-color: rgba(90, 46, 15, 0.3);
+  --border-color: transparent;
+
+  background: linear-gradient(135deg, var(--kef-cream), #ffffff);
+  background-clip: padding-box;
+  background-size: cover;
+
+  border: var(--outline-w) solid var(--border-color);
+  border-radius: 12px;
+  box-shadow: 0 0 var(--shadow-blur) 0 var(--shadow-color);
+
+  transition-property: border, box-shadow, filter, outline-offset, opacity, rotate, scale, z-index;
+  transition-duration: 0.15s, 0.15s, 0.6s, 0.6s, 0.3s, 0.3s, 0.3s, 0.15s;
+
+  filter: brightness(0.9) saturate(0.8);
+  opacity: 0.85;
+  scale: 0.9;
+  rotate: var(--rotation, -3deg);
+
+  outline: var(--outline-w) solid var(--preview-bg);
+  outline-offset: var(--outline-w);
+
+  min-height: var(--mobile--h);
+  min-width: var(--mobile--w);
+  width: 100%;
+  max-width: 300px;
+
+  position: relative;
+  cursor: pointer;
+
+  animation-name: float-animation;
+  animation-delay: var(--delay);
+  animation-duration: var(--duration);
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+.animated-card:focus,
+.animated-card:hover {
+  --shadow-blur: 60px;
+  --shadow-color: rgba(249, 168, 37, 0.4);
+  --border-color: var(--kef-orange);
+
+  background: linear-gradient(135deg, #ffffff, var(--kef-cream));
+  filter: brightness(1.1) saturate(1.2);
+  opacity: 1;
+  
+  outline-offset: calc(var(--outline-w) / 2);
+  
+  scale: 1;
+  rotate: 0deg;
+  
+  transition-property: border, box-shadow, filter, outline-offset, opacity, rotate, scale, z-index;
+  transition-duration: 0.15s, 0.15s, 0.3s, 0.3s, 0.3s, 0.3s, 0.3s, 0.15s;
+  z-index: 10;
+}
+
+.animated-card:focus {
+  --shadow-color: rgba(244, 67, 54, 0.4);
+  --border-color: var(--kef-red);
+  z-index: 15;
+}
+
+.card-content {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.feature-number {
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  background: var(--kef-orange);
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 1.2rem;
+  font-family: 'Zodiak', serif;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  z-index: 2;
+}
+
+.feature-image-cover {
+  width: 100%;
+  height: 160px;
+  position: relative;
+  border-radius: 12px 12px 0 0;
+  transition: transform 0.3s ease;
+  overflow: hidden;
+}
+
+.image-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(249, 168, 37, 0.1) 0%, rgba(244, 67, 54, 0.1) 100%);
+  transition: opacity 0.3s ease;
+}
+
+.animated-card:hover .feature-image-cover {
+  transform: scale(1.05);
+}
+
+.animated-card:hover .image-overlay {
+  opacity: 0.3;
+}
+
+.feature-text-content {
+  padding: 1.5rem;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: #ffffff;
+}
+
+.feature-title {
+  color: var(--kef-brown);
+  font-family: 'Rye', serif;
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  font-weight: normal;
+  line-height: 1.3;
+}
+
+.feature-description {
+  color: var(--kef-brown);
+  font-family: 'Zodiak', serif;
+  font-weight: 400;
+  line-height: 1.6;
+  font-size: 0.95rem;
+  opacity: 0.9;
+}
+
+/* Individual card variations */
+.card-1 {
+  --delay: 0s;
+  --rotation: -3deg;
+}
+
+.card-2 {
+  --delay: 0.5s;
+  --rotation: 2deg;
+}
+
+.card-3 {
+  --delay: 1s;
+  --rotation: -1deg;
+}
+
+/* Float animation */
+@keyframes float-animation {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+  .key-features {
+    padding: 3rem 0;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+  }
+  
+  .card__container {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    min-height: auto;
+  }
+  
+  .animated-card {
+    --mobile--w: 260px;
+    --mobile--h: 320px;
+    max-width: 280px;
+    scale: 1;
+    rotate: 0deg;
+  }
+  
+  .animated-card:hover,
+  .animated-card:focus {
+    scale: 1.05;
+  }
+  
+  .card-content {
+    padding: 0;
+  }
+  
+  .feature-text-content {
+    padding: 1.2rem;
+  }
+  
+  .feature-title {
+    font-size: 1.2rem;
+  }
+  
+  .feature-description {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .animated-card {
+    --mobile--w: 240px;
+    --mobile--h: 300px;
+    max-width: 100%;
+  }
+  
+  .feature-image-cover {
+    height: 120px;
+  }
+  
+  .feature-text-content {
+    padding: 1rem;
+  }
+  
+  .feature-title {
+    font-size: 1.1rem;
+  }
+  
+  .feature-description {
+    font-size: 0.85rem;
+  }
+}

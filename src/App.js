@@ -4,17 +4,18 @@ import GifIntro from './components/GifIntro';
 import MainPage from './components/MainPage';
 import './App.css';
 
+// Sections
+import Overview from './pages/Overview';
+import Objectives from './pages/Objectives';
+import KeyFeatures from './pages/KeyFeatures';
+
 function App() {
-  // State to track if we are in the intro loading phase
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
-    // Wait for a few seconds (e.g., 4 seconds) then hide the intro
     const timer = setTimeout(() => {
       setIsLoading(false);
-    }, 4000); // Adjust time to match your GIF length
-
-    // Cleanup function to clear the timer
+    }, 4000); // Adjust to GIF duration
     return () => clearTimeout(timer);
   }, []);
 
@@ -23,7 +24,26 @@ function App() {
       <AnimatePresence>
         {isLoading && <GifIntro key="intro" />}
       </AnimatePresence>
-      {!isLoading && <MainPage />}
+
+      {!isLoading && (
+        <>
+          <section id="main">
+            <MainPage />
+          </section>
+
+          <section id="overview">
+            <Overview />
+          </section>
+
+          <section id="objectives">
+            <Objectives />
+          </section>
+
+          <section id="key-features">
+            <KeyFeatures />
+          </section>
+        </>
+      )}
     </div>
   );
 }

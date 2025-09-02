@@ -1,94 +1,84 @@
-/* General Body Styles */
+@import url('https://fonts.googleapis.com/css2?family=Rye&family=Zodiak:wght@400;500;600&display=swap');
+
+/* CSS Variables for Brand Colors */
+:root {
+  --kef-cream: #f9f5e9;
+  --kef-brown: #5a2e0f;
+  --kef-orange: #f9a825;
+  --kef-red: #f44336;
+  --kef-beige: #e8dcc0;
+  --kef-mud: #8b4513;
+  --kef-light-brown: #d2b48c;
+  --kef-dark-cream: #f0e6d2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  background-color: #f8f8f8;
-  color: #333;
-  text-align: center;
+  font-family: 'Zodiak', serif;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--kef-cream);
+  color: var(--kef-brown);
+  overflow-x: hidden;
 }
 
-/* Fullscreen GIF Intro Container */
-.gif-intro-container {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #000; /* Black background */
-  z-index: 999;
+.App {
+  min-height: 100vh;
+  position: relative;
 }
 
-.gif-intro-container img {
-  width: 100%;
-  height: 100%;
-  object-fit: contain; /* Use 'contain' to see the whole GIF or 'cover' to fill screen */
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
-/* Navbar */
-.navbar {
-  background: rgba(255, 255, 255, 0.8);
-  backdrop-filter: blur(10px);
-  padding: 1rem;
-  position: sticky;
-  top: 0;
-  z-index: 100;
-  border-bottom: 1px solid #eee;
+/* Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Rye', serif;
+  font-weight: normal;
 }
 
-.navbar nav {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
+p, span, div, a, li {
+  font-family: 'Zodiak', serif;
+  font-weight: 400;
 }
 
-.navbar a {
-  text-decoration: none;
-  color: #333;
-  font-weight: 600;
+/* Global Animation Classes */
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 0.8s ease forwards;
 }
 
-/* Hero Section (where Maa Kali image appears) */
-.hero-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  min-height: 90vh;
-  padding: 2rem;
-  background: #fff;
+.slide-in-left {
+  opacity: 0;
+  transform: translateX(-50px);
+  animation: slideInLeft 0.6s ease forwards;
 }
 
-.hero-section img {
-  max-width: 300px;
-  height: auto;
-  margin-bottom: 2rem;
-}
-
-.hero-text h1 {
-  font-size: 3rem;
-  margin: 0;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  color: #666;
-}
-
-/* Other Sections */
-section {
-  padding: 60px 20px;
-  border-bottom: 1px solid #eee;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-  .hero-text h1 {
-    font-size: 2.2rem;
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
-  .hero-section img {
-    max-width: 200px;
+}
+
+@keyframes slideInLeft {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
   }
 }

@@ -37,7 +37,7 @@ const MainPage = () => {
           <a href="Schedule" style={{ color: "gold", fontWeight: "bold" }}>
             Schedule
           </a>
-          <a href="#contact" style={{ color: "gold", fontWeight: "bold" }}>
+          <a href="contact" style={{ color: "gold", fontWeight: "bold" }}>
             Contact
           </a>
           <a href="hero" style={{ color: "gold", fontWeight: "bold" }}>

@@ -11,6 +11,8 @@ import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
 
+import SchedulePage from './pages/SchedulePage';
+
 function App() {
   const [isLoading, setIsLoading] = useState(true);
 
@@ -56,7 +58,10 @@ function App() {
 
             {/* About page route */}
             <Route path="/about" element={<Aboutpage />} />
+            <Route path="/Schedule" element={<SchedulePage />} />
+
           </Routes>
+          
         </Router>
       )}
     </div>

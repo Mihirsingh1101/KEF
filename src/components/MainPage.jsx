@@ -30,17 +30,18 @@ const MainPage = () => {
         }}
       >
         <nav style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
-          <a href="#hero" style={{ color: "gold", fontWeight: "bold" }}>
-            Home
-          </a>
-          <a href="#about" style={{ color: "gold", fontWeight: "bold" }}>
+
+          <a href="about" style={{ color: "gold", fontWeight: "bold" }}>
             About
           </a>
-          <a href="#gallery" style={{ color: "gold", fontWeight: "bold" }}>
-            Gallery
+          <a href="Schedule" style={{ color: "gold", fontWeight: "bold" }}>
+            Schedule
           </a>
           <a href="#contact" style={{ color: "gold", fontWeight: "bold" }}>
             Contact
+          </a>
+          <a href="hero" style={{ color: "gold", fontWeight: "bold" }}>
+            Home
           </a>
         </nav>
       </header>
@@ -86,7 +87,7 @@ const MainPage = () => {
         </motion.div>
       </section>
 
-     
+
     </motion.div>
   );
 };

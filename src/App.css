@@ -1,38 +1,147 @@
-.App {
-  text-align: center;
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Lora:ital,wght@0,400;0,700;1,400&display=swap');
+
+/* --- Navbar Link Hover --- */
+.nav-link::after { /* This is for the underline effect */
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 0;
+  height: 2px;
+  background-color: #FFF8DC; /* White underline */
+  transition: width 0.3s ease;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.nav-link:hover::after {
+  width: 100%;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.nav-link:hover {
+  color: #FFF8DC !important; /* Brighter white on hover */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+/* --- Hero Section Initial Animations --- */
+.hero-animation h1 {
+  opacity: 0;
+  transform: translateY(30px) scale(0.9);
+  animation: heroTitleFadeIn 1s forwards ease-out 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
+@keyframes heroTitleFadeIn {
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.hero-animation p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: heroSubtitleFadeIn 1s forwards ease-out 0.7s;
+}
+
+@keyframes heroSubtitleFadeIn {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero-image-animate {
+  opacity: 0;
+  transform: scale(0.95);
+  animation: heroImageScaleIn 1s forwards ease-out 1.2s;
+}
+
+@keyframes heroImageScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+
+/* --- On-Scroll Animation for Cards --- */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* --- Card Hover Effect --- */
+.card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+/* --- Responsive Adjustments --- */
+@media (max-width: 900px) {
+  .card-grid {
+    grid-template-columns: 1fr; /* Stack cards vertically on smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 15px 20px;
+  }
+  .navbarNav {
+    margin-top: 15px;
+    flex-wrap: wrap; /* Allow nav items to wrap */
+    justify-content: center;
+  }
+  .navItem {
+    margin: 0 15px 10px 15px; /* Adjust spacing */
+  }
+  .kefTitle {
+    font-size: 1.5rem;
+  }
+  .hero-title {
+    font-size: 3.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.4rem;
+  }
+  .card-title {
+    font-size: 2rem;
+  }
+  .team-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+@media (max-width: 480px) {
+  .kefLogo {
+    height: 50px;
+    width: 50px;
+  }
+  .kefTitle {
+    font-size: 1.2rem;
+  }
+  .hero-title {
+    font-size: 2.5rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .section-padding {
+    padding: 40px 15px;
+  }
+  .card {
+    padding: 30px;
+  }
+  .card-title {
+    font-size: 1.8rem;
   }
 }

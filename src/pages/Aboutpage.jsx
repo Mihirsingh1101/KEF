@@ -1,6 +1,41 @@
-import React, { useEffect } from 'react';
+import React, { useState, useEffect , useRef} from 'react';
 import './KEFAboutUs.css'; // The CSS file that will contain all styles
-import kefLogo from '../assets/kef-logo.jpg'; 
+import kefLogo from '../assets/kef-logo.jpg';
+import adityapandey from '../assets/aditya pandey.jpeg';
+import virinchi from '../assets/virinchi.jpg';
+import priyankari from '../assets/priyankari.jpg';
+import Dharma from '../assets/Dharma.jpg';
+import sheetalBhartiPhoto from '../assets/Sheetal Bharti.jpg';
+import nakulKumarPhoto from '../assets/nakul kumar.jpg';
+import pranshuPhoto from '../assets/pranshu.jpg';
+import piyushRoyPhoto from '../assets/piyush roy.jpg';
+import nitinKumarPhoto from '../assets/nitin kumar.jpg';
+import vaibhavDeepPhoto from '../assets/vabhav deep jaiswal.jpg';
+import ganpatiRamanathanPhoto from '../assets/ganpati ramanathan.jpeg';
+import vishalBindraPhoto from '../assets/vishal bindra.jpeg';
+import alokGuptaPhoto from '../assets/alok gupta.jpeg';
+import rohitPathakPhoto from '../assets/rohit pathak.jpeg';
+import anilSharmaPhoto from '../assets/anil sharma.png';
+import sankrantSanuPhoto from '../assets/sankrant sanu.jpeg';
+import anandPrakashPhoto from '../assets/Anand Prakash.jpg';
+import kanagaSabapathiPhoto from '../assets/Kanaga Sabapathi.jpg';
+import kanganaRanautPhoto from '../assets/kangana ranaut.jpeg';
+import lakshmidharBeheraPhoto from '../assets/lakshmidhar behera.png';
+import gautamDesirajuPhoto from '../assets/gautam desiraju.jpeg';
+import gantiMurthyPhoto from '../assets/ganti murthy.jpeg';
+
+import ajaySoniPhoto from '../assets/ajay soni.jpeg';
+import richaMishraPhoto from '../assets/richa mishra.jpeg';
+import dimpleKaulPhoto from '../assets/dimple kaul.jpeg';
+import prakritiNigamPhoto from '../assets/prakriti nigam.jpg';
+import ajayChaturvediPhoto from '../assets/Ajay Chaturvedi.jpg';
+import suryaPrakashPhoto from '../assets/Surya prakash upadhyay.jpeg';
+import arnavBhavsarPhoto from '../assets/arnav bhavsar.jpeg';
+import shyamMasakapalliPhoto from '../assets/shyam masakapalli.jpeg';
+import shefaliVaidyaPhoto from '../assets/shefali vaidya.jpg';
+import paritoshSharmaPhoto from '../assets/Paritosh Sharma.jpg';
+import bhupendraMondalPhoto from '../assets/bhupendra mondal.jpg';
+import bijitSinghaPhoto from '../assets/bijit singha.jpg';
 
 // ========================================================================
 // CODE TO APPEND: Team Data and Reusable Carousel Component
@@ -8,45 +43,272 @@ import kefLogo from '../assets/kef-logo.jpg';
 
 // --- Placeholder Data for the Teams ---
 // In a real application, you would fetch this data from an API.
-const studentCouncilData = Array.from({ length: 10 }, (_, i) => ({
-  photoUrl: `https://i.pravatar.cc/150?u=student${i}`,
-  name: `Student Name ${i + 1}`,
-  post: `Council Post ${i + 1}`,
-}));
+const studentCouncilData = [
+  {
+    photoUrl: adityapandey, // Use the imported image variable
+    name: 'Aditya Pandey',
+    post: 'B.Tech Undergrad, IIT Mandi Co-Convenor',
+  },
+  {
+    photoUrl: virinchi,
+    name: 'E Virinchi',
+    post: 'B.Tech Undergrad, IIT Mandi Co-Convenor',
+  },
+  {
+    photoUrl: priyankari, // You can also use direct web links
+    name: 'Priyankari',
+    post: 'PhD Research Scholar, IIT Mandi Chief Operations',
+  },
+  {
+    photoUrl: Dharma, // You can also use direct web links
+    name: 'Dharma',
+    post: 'PhD Scholar, IIT Mandi Head-Logistics',
+  },
+  {
+    photoUrl: sheetalBhartiPhoto,
+    name: 'Sheetal Bharti',
+    post: 'PhD Scholar, IIT Mandi Head-Hospitality',
+  },
+  {
+    photoUrl: nakulKumarPhoto,
+    name: 'Nakul Kumar',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Social Media',
+  },
+  {
+    photoUrl: pranshuPhoto,
+    name: 'Pranshu',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Community & Artisan Engagementg',
+  },
+  {
+    photoUrl: piyushRoyPhoto,
+    name: 'Piyush Roy',
+    post: 'B.Tech Undergrad, IIT Mandi Strategy Advisor',
+  },
+  {
+    photoUrl: nitinKumarPhoto,
+    name: 'Nitin Kumar',
+    post: 'Ph.D. Scholar, IIT Mandi Head-Research and Curation', // Placeholder - Please update post
+  },
+  {
+    photoUrl: vaibhavDeepPhoto,
+    name: 'Vaibhav Deep Jaiswal',
+    post: 'Research scholar, IIT Mandi Research Curator', // Placeholder - Please update post
+  },
+];
 
-const advisoryBoardData = Array.from({ length: 12 }, (_, i) => ({
-  photoUrl: `https://i.pravatar.cc/150?u=advisor${i}`,
-  name: `Advisor Name ${i + 1}`,
-  post: `Board Member`,
-}));
+const advisoryBoardData = [
+  {
+    photoUrl: ganpatiRamanathanPhoto,
+    name: 'Prof. Ganpati Ramanathan',
+    post: 'National Advisor, Indigenous Innovation',
+  },
+  {
+    photoUrl: vishalBindraPhoto,
+    name: 'Mr. Vishal Bindra',
+    post: 'Business Leader, Business Development',
+  },
+  {
+    photoUrl: alokGuptaPhoto,
+    name: 'Mr. Alok Gupta',
+    post: 'Investor, Investment',
+  },
+  {
+    photoUrl: rohitPathakPhoto,
+    name: 'Mr. Rohit Pathak',
+    post: 'Business Leader, Business Strategy',
+  },
+  {
+    photoUrl: anilSharmaPhoto,
+    name: 'Mr. Anil Sharma',
+    post: 'Entrepreneur, Entrepreneurship',
+  },
+  {
+    photoUrl: sankrantSanuPhoto,
+    name: 'Mr. Sankrant Sanu',
+    post: 'Entrepreneur (GarudaLife), Entrepreneurship',
+  },
+  {
+    photoUrl: anandPrakashPhoto,
+    name: 'Mr. Anand Prakash',
+    post: 'President GI4QC',
+  },
+  {
+    photoUrl: kanagaSabapathiPhoto,
+    name: 'Prof. Kanaga Sabapathi',
+    post: 'Professor and Author',
+  },
+  {
+    photoUrl: kanganaRanautPhoto,
+    name: 'Ms. Kangana Ranaut',
+    post: 'MP & Cultural Voice of Himachal, Cultural Leadership',
+  },
+  {
+    photoUrl: lakshmidharBeheraPhoto,
+    name: 'Prof. Lakshmidhar Behera',
+    post: 'Director, IIT Mandi, Academic Leadership',
+  },
+  {
+    photoUrl: gautamDesirajuPhoto,
+    name: 'Prof. Gautam Desiraju',
+    post: 'Scientist and Cultural Patron, Science and Culture',
+  },
+  {
+    photoUrl: gantiMurthyPhoto,
+    name: 'Dr. Ganti Murthy',
+    post: 'IIT Indore, Academic Research',
+  },
+];
 
-const organizingCommitteeData = Array.from({ length: 12 }, (_, i) => ({
-  photoUrl: `https://i.pravatar.cc/150?u=organiser${i}`,
-  name: `Organiser Name ${i + 1}`,
-  post: `Committee Head`,
-}));
+const organizingCommitteeData = [
+  {
+    photoUrl: ajaySoniPhoto,
+    name: 'Dr. Ajay Soni',
+    post: 'Faculty, Chair',
+  },
+  {
+    photoUrl: richaMishraPhoto,
+    name: 'Dr. Richa Mishra',
+    post: 'Parul University, Chair',
+  },
+  {
+    photoUrl: dimpleKaulPhoto,
+    name: 'Ms. Dimple Kaul',
+    post: 'Indica, Chair',
+  },
+  {
+    photoUrl: prakritiNigamPhoto,
+    name: 'Ms. Prakriti Nigam',
+    post: 'Chairperson, Being Shiva Foundation',
+  },
+  {
+    photoUrl: ajayChaturvediPhoto,
+    name: 'Prof. Ajay Chaturvedi',
+    post: 'Visiting Faculty, General Chair / Convenor',
+  },
+  {
+    photoUrl: suryaPrakashPhoto,
+    name: 'Dr. Surya Prakash Upadhyaya',
+    post: 'Faculty, Chair',
+  },
+  {
+    photoUrl: arnavBhavsarPhoto,
+    name: 'Dr. Arnav Bhavsar',
+    post: 'Dean, Sponsored Research and Industrial Consultancy, Chair',
+  },
+  {
+    photoUrl: shyamMasakapalliPhoto,
+    name: 'Dr. Shyam Masakapalli',
+    post: 'Faculty, Chair',
+  },
+  {
+    photoUrl: shefaliVaidyaPhoto,
+    name: 'Ms. Shefali Vaidya',
+    post: 'Author, Public Intellectual and Expert on Temple Architecture & Textiles, Chair',
+  },
+  {
+    photoUrl: paritoshSharmaPhoto,
+    name: 'Mr. Paritosh Sharma',
+    post: 'Founder & Professor, Shunya AI, Chair',
+  },
+  {
+    photoUrl: bhupendraMondalPhoto,
+    name: 'Mr. Bhupendra Mondal',
+    post: 'Social Media Strategist',
+  },
+  {
+    photoUrl: bijitSinghaPhoto,
+    name: 'Mr. Bijit Singha',
+    post: 'Physicist, Quantitative Finance Modeller, Author',
+  },
+];
 
 
-// --- Reusable Team Carousel Component ---
+// --- CORRECTED Finite Team Carousel Component ---
 const TeamCarousel = ({ title, members, styles }) => {
-  // We calculate the animation duration based on the number of members
-  // to keep the scroll speed consistent across carousels.
-  const animationDuration = members.length * 4; // 4 seconds per card
+  const trackRef = useRef(null);
+  const [isAtStart, setIsAtStart] = useState(true);
+  const [isAtEnd, setIsAtEnd] = useState(false);
+
+  // This function now runs after a scroll event to update the button states
+  const updateButtonStates = () => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    // Check if we are at the beginning
+    setIsAtStart(track.scrollLeft < 5); // Use a small tolerance
+
+    // Check if we have scrolled to the end
+    // scrollWidth is the total scrollable width
+    // clientWidth is the visible width of the container
+    const maxScroll = track.scrollWidth - track.clientWidth;
+    setIsAtEnd(track.scrollLeft > maxScroll - 5); // Use a small tolerance
+  };
+
+  const handleScroll = (direction) => {
+    const track = trackRef.current;
+    if (!track) return;
+
+    // Calculate the width to scroll by (3 cards)
+    const card = track.querySelector('.person-card');
+    if (!card) return; // Exit if no cards are found
+    
+    const cardWidth = card.offsetWidth;
+    const gap = parseInt(window.getComputedStyle(track).gap, 10) || 32; // Default gap to 32px if needed
+    const scrollAmount = (cardWidth + gap) * 3;
+
+    // Calculate the new scroll position
+    const newScrollPosition = direction === 'right'
+      ? track.scrollLeft + scrollAmount
+      : track.scrollLeft - scrollAmount;
+
+    track.scrollTo({
+      left: newScrollPosition,
+      behavior: 'smooth',
+    });
+  };
+
+  // This useEffect hook attaches an event listener to check the scroll position
+  useEffect(() => {
+    const track = trackRef.current;
+    if (track) {
+      // Run the check once initially and then on every scroll
+      updateButtonStates();
+      track.addEventListener('scroll', updateButtonStates);
+
+      // Clean up the event listener when the component unmounts
+      return () => track.removeEventListener('scroll', updateButtonStates);
+    }
+  }, [members]); // Rerun if the members change
 
   return (
     <section style={styles.section} className="team-carousel-section">
       <h2 style={{...styles.sectionTitle, textAlign: 'center'}} className="animate-on-scroll">{title}</h2>
-      <div className="carousel-container animate-on-scroll">
-        <div className="carousel-track" style={{ animationDuration: `${animationDuration}s` }}>
-          {/* We map the members array twice for the infinite loop effect */}
-          {[...members, ...members].map((member, index) => (
-            <div className="person-card" key={index}>
-              <img src={member.photoUrl} alt={member.name} className="person-photo" />
-              <h3 className="person-name">{member.name}</h3>
-              <p className="person-post">{member.post}</p>
-            </div>
-          ))}
+      <div className="carousel-wrapper">
+        <button 
+          className="scroll-button left" 
+          onClick={() => handleScroll('left')}
+          disabled={isAtStart}
+        >
+          <span>&#8249;</span>
+        </button>
+        <div className="carousel-container animate-on-scroll" ref={trackRef}>
+          <div className="carousel-track">
+            {members.map((member, index) => (
+              <div className="person-card" key={index}>
+                <img src={member.photoUrl} alt={member.name} className="person-photo" />
+                <h3 className="person-name">{member.name}</h3>
+                <p className="person-post">{member.post}</p>
+              </div>
+            ))}
+          </div>
         </div>
+        <button 
+          className="scroll-button right" 
+          onClick={() => handleScroll('right')}
+          disabled={isAtEnd}
+        >
+          <span>&#8250;</span>
+        </button>
       </div>
     </section>
   );
@@ -190,9 +452,9 @@ const KEFAboutUsPage = () => {
         </div>
       </section>
       {/* ===== PASTE THE NEW TEAM SECTIONS HERE ===== */}
-      <TeamCarousel title="Student Council" members={studentCouncilData} styles={styles} />
-      <TeamCarousel title="Advisory Board" members={advisoryBoardData} styles={styles} />
       <TeamCarousel title="Organizing Committee" members={organizingCommitteeData} styles={styles} />
+      <TeamCarousel title="Advisory Board" members={advisoryBoardData} styles={styles} />
+      <TeamCarousel title="Student Council" members={studentCouncilData} styles={styles} />
 
       <footer style={styles.footer}>
         <p>© {new Date().getFullYear()} KEF - IIT Mandi | Celebrating Unity in Diversity</p>

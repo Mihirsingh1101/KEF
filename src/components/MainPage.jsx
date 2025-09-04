@@ -52,7 +52,7 @@ const MainPage = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <h1 style={{ fontSize: "3rem", color: "gold" }}>🌺 Divine Blessings 🌺</h1>
+          <h1 style={{ fontSize: "3rem", color: "gold" }}> Divine Blessings </h1>
           <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "1rem auto" }}>
             Welcome to a journey of peace, spirituality, and the eternal culture of
             India.

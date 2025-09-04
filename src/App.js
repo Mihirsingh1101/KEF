@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 import GifIntro from './components/GifIntro';
 import MainPage from './components/MainPage';
@@ -10,28 +10,36 @@ import Aboutpage from './pages/Aboutpage';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
-
 import SchedulePage from './pages/SchedulePage';
 
-function App() {
-  const [isLoading, setIsLoading] = useState(true);
+import Navbar from './components/Navbar';
+
+function AnimatedRoutes() {
+  const location = useLocation();
+  const [isLoading, setIsLoading] = useState(location.pathname === "/");
 
   useEffect(() => {
-    const timer = setTimeout(() => {
+    if (location.pathname === "/") {
+      setIsLoading(true);
+      const timer = setTimeout(() => {
+        setIsLoading(false);
+      }, 4000); // Match GIF duration
+      return () => clearTimeout(timer);
+    } else {
       setIsLoading(false);
-    }, 4000); // Match GIF duration
-    return () => clearTimeout(timer);
-  }, []);
+    }
+  }, [location.pathname]);
 
   return (
-    <div className="App">
+    <>
       <AnimatePresence>
         {isLoading && <GifIntro key="intro" />}
       </AnimatePresence>
 
       {!isLoading && (
-        <Router>
-          <Routes>
+        <>
+          <Navbar />
+          <Routes location={location} key={location.pathname}>
             {/* Main scrolling page */}
             <Route
               path="/"
@@ -58,12 +66,20 @@ function App() {
 
             {/* About page route */}
             <Route path="/about" element={<Aboutpage />} />
-            <Route path="/Schedule" element={<SchedulePage />} />
-
+            <Route path="/schedule" element={<SchedulePage />} />
           </Routes>
-          
-        </Router>
+        </>
       )}
+    </>
+  );
+}
+
+function App() {
+  return (
+    <div className="App">
+      <Router>
+        <AnimatedRoutes />
+      </Router>
     </div>
   );
 }

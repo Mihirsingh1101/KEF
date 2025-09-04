@@ -18,33 +18,6 @@ const MainPage = () => {
         color: "#fff",
       }}
     >
-      {/* Navbar */}
-      <header
-        className="navbar"
-        style={{
-          background: "rgba(201, 4, 4, 0.2)", // deep maroon w/ transparency
-          padding: "1rem 2rem",
-          position: "sticky",
-          top: 0,
-          zIndex: 10,
-        }}
-      >
-        <nav style={{ display: "flex", gap: "2rem", justifyContent: "center" }}>
-
-          <a href="about" style={{ color: "gold", fontWeight: "bold" }}>
-            About
-          </a>
-          <a href="Schedule" style={{ color: "gold", fontWeight: "bold" }}>
-            Schedule
-          </a>
-          <a href="contact" style={{ color: "gold", fontWeight: "bold" }}>
-            Contact
-          </a>
-          <a href="hero" style={{ color: "gold", fontWeight: "bold" }}>
-            Home
-          </a>
-        </nav>
-      </header>
 
       {/* Hero Section */}
       <section

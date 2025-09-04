@@ -118,18 +118,6 @@ const KEFAboutUsPage = () => {
 
   return (
     <div style={styles.page}>
-      {/* ===== Navbar ===== */}
-      <nav style={styles.navbar}>
-        <div style={styles.navbarBrand}>
-          <img src={kefLogo} alt="KEF Logo" style={styles.kefLogo} />
-          <span style={styles.kefTitle}>KEF IIT Mandi</span>
-        </div>
-        <ul style={styles.navbarNav}>
-          <li><a href="#about" className="nav-link">About KEF</a></li>
-          <li><a href="#experience" className="nav-link">The Experience</a></li>
-          <li><a href="#sponsors" className="nav-link">Our Supporters</a></li>
-        </ul>
-      </nav>
 
       {/* ===== Hero Section with Animated Background ===== */}
       <header style={styles.heroSection} className="hero-section">

@@ -1,6 +1,5 @@
 // src/pages/SchedulePage.js
 import React, { useState } from "react";
-import Header from "../components/Header";
 import InteractiveTimeline from "../components/InteractiveTimeline";
 import DaySchedule from "../components/DaySchedule";
 import ScheduleData from "../Data/ScheduleData";
@@ -16,7 +15,6 @@ const SchedulePage = () => {
         input[type=range]::-moz-range-thumb { width: var(--thumb-size); height: var(--thumb-size); background: transparent; border: 0; cursor: pointer; }
       `}</style>
 
-      <Header />
       <main>
         <InteractiveTimeline activeDay={activeDay} setActiveDay={setActiveDay} />
         <section className="py-16 px-4">

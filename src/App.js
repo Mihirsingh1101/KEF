@@ -2,36 +2,43 @@ import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
-// Your existing components and pages
-import GifIntro from './components/GifIntro';
-import MainPage from './components/MainPage';
-import './App.css';
+// Firebase Auth context
+import { AuthProvider } from './context/AuthContext';
 
+// Import all necessary components and pages
+import GifIntro from './components/GifIntro';
+import Navbar from './components/Navbar';
+import Footer from './pages/Footer';
+
+import MainPage from './components/MainPage';
 import Aboutpage from './pages/Aboutpage';
+import SchedulePage from './pages/SchedulePage';
+import Content from './pages/Content';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
-import SchedulePage from './pages/SchedulePage';
 
-import Navbar from './components/Navbar';
-import Content from './pages/Content';
+// Firebase Auth pages
+import SignIn from './pages/SignIn';
+import SignUp from './pages/SignUp';
+import Profile from './pages/Profile';
+import ProtectedRoute from './pages/ProtectedRoute';
 
-// 1. Import your new CulturalFooter component
-import Footer from './pages/Footer' // Make sure the path is correct
+import './App.css';
 
 function AnimatedRoutes() {
   const location = useLocation();
-  // Set initial state based on whether it's the very first load of the homepage
-  const [isLoading, setIsLoading] = useState(sessionStorage.getItem('introPlayed') !== 'true' && location.pathname === "/");
+  const [isLoading, setIsLoading] = useState(
+    sessionStorage.getItem('introPlayed') !== 'true' && location.pathname === "/"
+  );
 
   useEffect(() => {
-    // Only show the intro GIF on the first visit to the homepage during a session
     if (location.pathname === "/" && sessionStorage.getItem('introPlayed') !== 'true') {
       setIsLoading(true);
       const timer = setTimeout(() => {
         setIsLoading(false);
-        sessionStorage.setItem('introPlayed', 'true'); // Mark intro as played for this session
-      }, 4000); // Match GIF duration
+        sessionStorage.setItem('introPlayed', 'true');
+      }, 4000); // match GIF duration
       return () => clearTimeout(timer);
     } else {
       setIsLoading(false);
@@ -47,37 +54,39 @@ function AnimatedRoutes() {
       {!isLoading && (
         <>
           <Navbar />
-          <main style={{ flex: '1 0 auto' }}> {/* Optional: helps with sticky footer layout */}
+          <main style={{ flex: '1 0 auto' }}>
             <Routes location={location} key={location.pathname}>
-              {/* Main scrolling page */}
+              {/* Main page with sections */}
               <Route
                 path="/"
                 element={
                   <>
-                    <section id="main">
-                      <MainPage />
-                    </section>
-                    <section id="overview">
-                      <Overview />
-                    </section>
-                    <section id="objectives">
-                      <Objectives />
-                    </section>
-                    <section id="key-features">
-                      <KeyFeatures />
-                    </section>
+                    <section id="main"><MainPage /></section>
+                    <section id="overview"><Overview /></section>
+                    <section id="objectives"><Objectives /></section>
+                    <section id="key-features"><KeyFeatures /></section>
                   </>
                 }
               />
 
-              {/* Other page routes */}
+              {/* Other pages */}
               <Route path="/about" element={<Aboutpage />} />
               <Route path="/schedule" element={<SchedulePage />} />
-              <Route path="/content" element={<Content />} /> {/* Corrected path to be lowercase */}
+              <Route path="/content" element={<Content />} />
+
+              {/* Auth pages */}
+              <Route path="/signin" element={<SignIn />} />
+              <Route path="/signup" element={<SignUp />} />
+              <Route
+                path="/profile"
+                element={
+                  <ProtectedRoute>
+                    <Profile />
+                  </ProtectedRoute>
+                }
+              />
             </Routes>
           </main>
-          
-          {/* 2. Add the CulturalFooter component here */}
           <Footer />
         </>
       )}
@@ -87,10 +96,12 @@ function AnimatedRoutes() {
 
 function App() {
   return (
-    <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}> {/* Optional: styles for sticky footer */}
-      <Router>
-        <AnimatedRoutes />
-      </Router>
+    <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
+      <AuthProvider>
+        <Router>
+          <AnimatedRoutes />
+        </Router>
+      </AuthProvider>
     </div>
   );
 }

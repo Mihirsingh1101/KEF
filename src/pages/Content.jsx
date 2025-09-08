@@ -1,10 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Search, Book, PenSquare, FileText, Video, Tag, UploadCloud, Sun, Moon, ArrowUpDown, X, Download, Eye } from 'lucide-react';
+import { Search, Book, PenSquare, FileText, Video, UploadCloud, Sun, Moon, X, Download, Eye } from 'lucide-react';
 import { useDropzone } from 'react-dropzone';
 import { Dialog } from '@headlessui/react';
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import { loadSlim } from "@tsparticles/slim";
+import { useAuth } from '../context/AuthContext';
+import { useNavigate } from 'react-router-dom';
 
 // --- NEW MOCK DATA: Kullad Economy Fest & Indian Culture ---
 const initialContent = [
@@ -15,7 +17,9 @@ const initialContent = [
         tags: ['History', 'Craft', 'Terracotta'],
         views: 1850,
         date: '2025-09-01T10:00:00Z',
-        description: 'An exploration of India’s ancient tradition of terracotta pottery, tracing its history from the Indus Valley Civilization to its modern-day revival.'
+        description: 'An exploration of India’s ancient tradition of terracotta pottery, tracing its history from the Indus Valley Civilization to its modern-day revival.',
+        // optional download URL (public) - if present, will be used for downloading
+        // downloadUrl: 'https://example.com/mitti.pdf'
     },
     {
         id: 2,
@@ -24,7 +28,7 @@ const initialContent = [
         tags: ['Sustainability', 'Economy', 'VocalForLocal'],
         views: 2750,
         date: '2025-08-25T14:30:00Z',
-        description: 'How the humble kullad is making a massive comeback, empowering local artisans and promoting an eco-friendly lifestyle across the nation.'
+        description: 'How the humble kullad is making a massive comeback, empowering local artisans and promoting an eco-friendly lifestyle across the nation.',
     },
     {
         id: 3,
@@ -33,7 +37,7 @@ const initialContent = [
         tags: ['Social Impact', 'Business', 'Artisans'],
         views: 1250,
         date: '2025-09-10T09:00:00Z',
-        description: 'A case study on how a cooperative of potters successfully scaled their kullad production for the Kumbh Mela, leading to significant economic upliftment.'
+        description: 'A case study on how a cooperative of potters successfully scaled their kullad production for the Kumbh Mela, leading to significant economic upliftment.',
     },
     {
         id: 4,
@@ -42,7 +46,7 @@ const initialContent = [
         tags: ['Environment', 'Science', 'EcoFriendly'],
         views: 1500,
         date: '2025-08-15T11:00:00Z',
-        description: 'A scientific paper comparing the environmental impact of single-use plastics with traditional Indian clay products like kullads.'
+        description: 'A scientific paper comparing the environmental impact of single-use plastics with traditional Indian clay products like kullads.',
     },
     {
         id: 5,
@@ -51,7 +55,7 @@ const initialContent = [
         tags: ['Festival', 'Art', 'Culture'],
         views: 3800,
         date: '2025-09-05T16:00:00Z',
-        description: 'A short film showcasing the intricate process of making a kullad, from sourcing the clay to the final firing, set against the vibrant backdrop of the festival.'
+        description: 'A short film showcasing the intricate process of making a kullad, from sourcing the clay to the final firing, set against the vibrant backdrop of the festival.',
     },
     {
         id: 6,
@@ -60,10 +64,9 @@ const initialContent = [
         tags: ['Chai', 'Lifestyle', 'Community'],
         views: 2100,
         date: '2025-09-12T12:00:00Z',
-        description: 'Exploring the deep-rooted connection between chai served in kullads and the culture of community bonding in India.'
+        description: 'Exploring the deep-rooted connection between chai served in kullads and the culture of community bonding in India.',
     }
 ];
-
 
 // ICON MAPPING
 const categoryIcons = {
@@ -127,6 +130,7 @@ const KnowledgeHub = () => {
     const [sortOrder, setSortOrder] = useState('Newest');
     const [selectedItem, setSelectedItem] = useState(null);
     const [isDarkMode, setIsDarkMode] = useState(true); // Default to dark mode for neo-dark theme
+    const [showSignInPrompt, setShowSignInPrompt] = useState(false);
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         onDrop: acceptedFiles => {
@@ -136,6 +140,9 @@ const KnowledgeHub = () => {
             alert(`${acceptedFiles.length} files dropped! Check the console.`);
         }
     });
+
+    const { user } = useAuth() || {}; // useAuth comes from your context - returns user when signed in
+    const navigate = useNavigate();
 
     const filteredContent = useMemo(() => content
         .filter(item => (selectedCategory === 'All' || item.category === selectedCategory))
@@ -155,6 +162,44 @@ const KnowledgeHub = () => {
             document.documentElement.classList.remove('dark');
         }
     }, [isDarkMode]);
+
+    // Download handler - only allows download if user is signed in
+    const handleDownload = async (item) => {
+        if (!user) {
+            // prompt user to sign in
+            setShowSignInPrompt(true);
+            return;
+        }
+
+        try {
+            if (item.downloadUrl) {
+                // use a direct link download
+                const a = document.createElement('a');
+                a.href = item.downloadUrl;
+                // try to infer extension or set a default
+                a.download = `${item.title.replace(/\s+/g, '_')}`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+            } else {
+                // generate a simple text file from item data as a fallback
+                const blob = new Blob([
+                    `Title: ${item.title}\n\nDate: ${new Date(item.date).toLocaleString()}\n\nDescription:\n${item.description}`
+                ], { type: 'text/plain' });
+                const url = URL.createObjectURL(blob);
+                const a = document.createElement('a');
+                a.href = url;
+                a.download = `${item.title.replace(/\s+/g, '_')}.txt`;
+                document.body.appendChild(a);
+                a.click();
+                a.remove();
+                URL.revokeObjectURL(url);
+            }
+        } catch (err) {
+            console.error('Download failed', err);
+            alert('Download failed. Check console for details.');
+        }
+    };
 
     return (
         <div className="bg-gray-100 dark:bg-black min-h-screen transition-colors duration-500 font-sans text-gray-800 dark:text-gray-200">
@@ -207,10 +252,10 @@ const KnowledgeHub = () => {
                         <input type="text" placeholder="Search content..." onChange={e => setSearchTerm(e.target.value)} className="w-full py-2 pl-12 pr-4 bg-transparent border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-amber-500 transition-colors" />
                     </div>
                     <div className="flex flex-wrap items-center gap-4">
-                        <select onChange={e => setSelectedCategory(e.target.value)} className="py-2 px-4 bg-transparent border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-amber-500">
+                        <select value={selectedCategory} onChange={e => setSelectedCategory(e.target.value)} className="py-2 px-4 bg-transparent border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-amber-500">
                             {categories.map(cat => <option key={cat} className="dark:bg-gray-800">{cat}</option>)}
                         </select>
-                        <select onChange={e => setSortOrder(e.target.value)} className="py-2 px-4 bg-transparent border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-amber-500">
+                        <select value={sortOrder} onChange={e => setSortOrder(e.target.value)} className="py-2 px-4 bg-transparent border-b-2 border-gray-300 dark:border-gray-600 focus:outline-none focus:border-amber-500">
                             <option className="dark:bg-gray-800">Newest</option>
                             <option className="dark:bg-gray-800">Most Viewed</option>
                             <option className="dark:bg-gray-800">Popular</option>
@@ -293,8 +338,27 @@ const KnowledgeHub = () => {
                                     </div>
                                 </div>
                                 <div className="flex-shrink-0 flex gap-4 mt-8">
-                                    <button className="flex-1 flex items-center justify-center gap-2 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors shadow-lg shadow-amber-500/30"><Download size={20} /> Download</button>
-                                    <button className="flex-1 flex items-center justify-center gap-2 py-3 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"><Eye size={20} /> Preview</button>
+                                    <button onClick={() => handleDownload(selectedItem)} className="flex-1 flex items-center justify-center gap-2 py-3 bg-amber-600 text-white rounded-lg hover:bg-amber-700 transition-colors shadow-lg shadow-amber-500/30"><Download size={20} /> Download</button>
+                                    <button onClick={() => alert('Preview action — implement your viewer here')} className="flex-1 flex items-center justify-center gap-2 py-3 bg-gray-200 dark:bg-gray-700 text-gray-800 dark:text-gray-200 rounded-lg hover:bg-gray-300 dark:hover:bg-gray-600 transition-colors"><Eye size={20} /> Preview</button>
+                                </div>
+                            </Dialog.Panel>
+                        </div>
+                    </Dialog>
+                )}
+            </AnimatePresence>
+
+            {/* Sign-in Prompt Modal (shows when unauthenticated user tries to download) */}
+            <AnimatePresence>
+                {showSignInPrompt && (
+                    <Dialog open={true} onClose={() => setShowSignInPrompt(false)} className="fixed inset-0 z-50">
+                        <div className="fixed inset-0 bg-black/60" aria-hidden="true" />
+                        <div className="fixed inset-0 flex items-center justify-center p-4">
+                            <Dialog.Panel as={motion.div} initial={{ scale: 0.9, opacity: 0 }} animate={{ scale: 1, opacity: 1 }} exit={{ scale: 0.9, opacity: 0 }} transition={{ duration: 0.2 }} className="w-full max-w-md bg-white/90 dark:bg-gray-900/90 p-6 rounded-xl shadow-2xl border border-white/20">
+                                <Dialog.Title className="text-2xl font-bold mb-2">Please sign in to download</Dialog.Title>
+                                <p className="text-sm mb-4">Downloading content is available for registered users only. Please sign in or create an account to continue.</p>
+                                <div className="flex gap-3 justify-end">
+                                    <button onClick={() => { setShowSignInPrompt(false); navigate('/signup'); }} className="px-4 py-2 rounded bg-gradient-to-r from-yellow-400 to-orange-500 text-white font-semibold">Create account</button>
+                                    <button onClick={() => { setShowSignInPrompt(false); navigate('/signin'); }} className="px-4 py-2 rounded border bg-transparent">Sign in</button>
                                 </div>
                             </Dialog.Panel>
                         </div>

@@ -98,7 +98,7 @@ function App() {
   return (
     <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AuthProvider>
-        <Router>
+        <Router basename="/KEF">
           <AnimatedRoutes />
         </Router>
       </AuthProvider>

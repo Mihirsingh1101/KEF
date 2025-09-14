@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
 
 // Firebase Auth context
 import { AuthProvider } from './context/AuthContext';
@@ -17,6 +17,7 @@ import Content from './pages/Content';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
+import Artist from './pages/Artist'
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -71,7 +72,11 @@ function AnimatedRoutes() {
 
               {/* Other pages */}
               <Route path="/about" element={<Aboutpage />} />
-              <Route path="/schedule" element={<SchedulePage />} />
+              <Route path="/schedule" element={
+                <> <SchedulePage />
+                  <Artist />
+                </>
+              } />
               <Route path="/content" element={<Content />} />
 
               {/* Auth pages */}
@@ -98,6 +103,7 @@ function App() {
   return (
     <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AuthProvider>
+        {/* <Router basename="/KEF"> */}
         <Router>
           <AnimatedRoutes />
         </Router>

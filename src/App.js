@@ -9,6 +9,7 @@ import { AuthProvider } from './context/AuthContext';
 import GifIntro from './components/GifIntro';
 import Navbar from './components/Navbar';
 import Footer from './pages/Footer';
+import NewsTicker from './components/NewsTicker'; // 🔹 Import NewsTicker
 
 import MainPage from './components/MainPage';
 import Aboutpage from './pages/Aboutpage';
@@ -18,7 +19,7 @@ import Content from './pages/Content';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
-import Artist from './pages/Artist'
+import Artist from './pages/Artist';
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -56,7 +57,8 @@ function AnimatedRoutes() {
       {!isLoading && (
         <>
           <Navbar />
-          <main style={{ flex: '1 0 auto' }}>
+          <main style={{ flex: '1 0 auto', paddingBottom: '50px' }}> 
+            {/* paddingBottom ensures content won’t overlap with ticker */}
             <Routes location={location} key={location.pathname}>
               {/* Main page with sections */}
               <Route
@@ -95,6 +97,7 @@ function AnimatedRoutes() {
             </Routes>
           </main>
           <Footer />
+          <NewsTicker /> {/* 🔹 Always visible at bottom */}
         </>
       )}
     </>

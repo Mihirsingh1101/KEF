@@ -20,7 +20,7 @@ const categoryIcons = {
     News: <FileText className="w-4 h-4" />
 };
 
-const categories = ['All', 'Books', 'Blogs', 'Case Studies', 'Research', 'Videos', 'News'];
+const categories = ['All', 'Books', 'Blogs', 'Case Studies', 'Research', 'Videos', ];
 
 // PARTICLES BACKGROUND
 const ParticlesComponent = React.memo(({ isDarkMode }) => {
@@ -63,16 +63,33 @@ const ParticlesComponent = React.memo(({ isDarkMode }) => {
 });
 
 // 🔥 FETCH FIRESTORE CONTENT
+// 🔥 FETCH FIRESTORE CONTENT (supports all categories)
 const fetchContent = async () => {
     try {
-        // adjust these for each subcollection you create later
+        // 🔹 Define references for each collection in Firestore
+        const booksRef = collection(db, "artifacts", "default-app-id", "public", "data", "books");
         const blogsRef = collection(db, "artifacts", "default-app-id", "public", "data", "blogs");
+        const caseStudiesRef = collection(db, "artifacts", "default-app-id", "public", "data", "caseStudies");
+        const researchRef = collection(db, "artifacts", "default-app-id", "public", "data", "research");
+        const videosRef = collection(db, "artifacts", "default-app-id", "public", "data", "videos");
         const newsRef = collection(db, "artifacts", "default-app-id", "public", "data", "newsItems");
 
-        const [blogsSnap, newsSnap] = await Promise.all([
+        // 🔹 Fetch all collections in parallel
+        const [booksSnap, blogsSnap, caseSnap, researchSnap, videosSnap, newsSnap] = await Promise.all([
+            getDocs(booksRef),
             getDocs(blogsRef),
+            getDocs(caseStudiesRef),
+            getDocs(researchRef),
+            getDocs(videosRef),
             getDocs(newsRef),
         ]);
+
+        // 🔹 Map each collection with category tag
+        const books = booksSnap.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data(),
+            category: "Books"
+        }));
 
         const blogs = blogsSnap.docs.map(doc => ({
             id: doc.id,
@@ -80,18 +97,32 @@ const fetchContent = async () => {
             category: "Blogs"
         }));
 
-        const news = newsSnap.docs.map(doc => ({
+        const caseStudies = caseSnap.docs.map(doc => ({
             id: doc.id,
             ...doc.data(),
-            category: "News"
+            category: "Case Studies"
         }));
 
-        return [...blogs, ...news];
+        const research = researchSnap.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data(),
+            category: "Research"
+        }));
+
+        const videos = videosSnap.docs.map(doc => ({
+            id: doc.id,
+            ...doc.data(),
+            category: "Videos"
+        }));
+
+        // 🔹 Return combined content
+        return [...books, ...blogs, ...caseStudies, ...research, ...videos];
     } catch (err) {
         console.error("Error fetching content:", err);
         return [];
     }
 };
+
 
 // MAIN COMPONENT
 const KnowledgeHub = () => {
@@ -169,7 +200,8 @@ const KnowledgeHub = () => {
     };
 
     return (
-        <div className="bg-gradient-to-b from-red-900 via-orange-900 to-yellow-900 dark:from-black dark:via-gray-900 dark:to-black min-h-screen text-gray-200 transition-colors">
+     <div className="bg-gradient-to-b from-red-900 via-orange-900 to-yellow-900 dark:from-black dark:via-gray-900 dark:to-black min-h-screen flex flex-col text-gray-200 transition-colors">
+
 
             {/* Dark Mode Toggle */}
             <motion.button
@@ -208,7 +240,7 @@ const KnowledgeHub = () => {
             </header>
 
             {/* Filters */}
-            <main className="container mx-auto p-6 -mt-20 relative z-10">
+            <main className="container mx-auto p-6 -mt-20 relative z-10 flex-grow">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}

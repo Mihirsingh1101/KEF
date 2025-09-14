@@ -1,43 +1,32 @@
 import React from "react";
 import { motion } from "framer-motion";
-import maaKaliImage from "./maa.png"; // your image
-import bgImage from "./mandala.jpg"; // add a cultural background pattern
+import maaKaliImage from "../assets/Mylogo.png"; // your logo with transparent background
+import bgImage from "./mandala.jpg"; // cultural mandala background
 
 const MainPage = () => {
   return (
     <motion.div
-      // Whole page fade-in
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}
+      className="relative min-h-screen text-white"
       style={{
         backgroundImage: `url(${bgImage})`,
         backgroundSize: "cover",
         backgroundPosition: "center",
-        minHeight: "100vh",
-        color: "#fff",
       }}
     >
-
       {/* Hero Section */}
       <section
         id="hero"
-        className="hero-section"
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          minHeight: "100vh",
-          textAlign: "center",
-          background:
-            "linear-gradient(rgba(155, 154, 154, 0.6), rgba(16, 16, 16, 0.8)), url('/temple-bg.jpg') center/cover",
-        }}
+        className="flex flex-col items-center justify-center min-h-screen text-center 
+                  bg-gradient-to-b from-black/60 to-black/80 px-6"
       >
+        {/* Logo */}
         <motion.img
           src={maaKaliImage}
-          alt="Maa Kali"
-          style={{ width: "280px", marginBottom: "1rem" }}
+          alt="Festival Logo"
+          className="w-56 md:w-72 lg:w-80 mb-6 drop-shadow-2xl"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{
@@ -46,21 +35,48 @@ const MainPage = () => {
             ease: [0, 0.71, 0.2, 1.01],
           }}
         />
+
+        {/* Text Section */}
         <motion.div
-          className="hero-text"
+          className="max-w-3xl"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 1, delay: 1 }}
         >
-          <h1 style={{ fontSize: "3rem", color: "gold" }}> Divine Blessings </h1>
-          <p style={{ fontSize: "1.2rem", maxWidth: "600px", margin: "1rem auto" }}>
-            Welcome to a journey of peace, spirituality, and the eternal culture of
-            India.
+          <h1
+            className="text-4xl md:text-5xl lg:text-6xl font-extrabold 
+                       text-transparent bg-clip-text bg-gradient-to-r 
+                       from-yellow-400 to-orange-500 drop-shadow-md"
+          >
+            Divine Blessings
+          </h1>
+
+          <p
+            className="mt-6 text-lg md:text-xl leading-relaxed text-gray-200 
+                       font-light tracking-wide"
+          >
+            <span className="block italic text-yellow-300 text-lg md:text-xl font-medium mb-4">
+              “Welcome to the Kullhad Economy Festival 2025”
+            </span>
+            From the heart of Himachal Pradesh, IIT Mandi presents the{" "}
+            <span className="text-yellow-400 font-semibold">
+              Kullhad Economy Festival
+            </span>{" "}
+            – a visionary celebration that brings together India’s
+            time-honored producers and contemporary innovators. This October,
+            campus lawns and minds will ignite with the stories of artisans,
+            farmers, and makers converging with the next generation of
+            scientists, engineers, and creators.
+          </p>
+
+          <p
+            className="mt-6 text-lg md:text-xl font-medium text-orange-300 italic"
+          >
+            “Reconnecting Hands and Minds: Tradition Meets Technology for a
+            Sustainable Tomorrow”
           </p>
         </motion.div>
       </section>
-
-
     </motion.div>
   );
 };

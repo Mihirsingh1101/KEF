@@ -41,21 +41,21 @@ const Overview = () => {
         <div className="images-section">
           <div className="images-container">
             <div className={`pot-image-wrapper ${isVisible ? 'animate' : ''}`}>
-              <img 
-                src={womanPotteryImage} 
-                alt="Woman making clay pot" 
+              <img
+                src={womanPotteryImage}
+                alt="Woman making clay pot"
                 className="pot-image woman-pot"
               />
             </div>
             <div className={`pot-image-wrapper ${isVisible ? 'animate' : ''} delay-1`}>
-              <img 
-                src={manPotteryImage} 
-                alt="Man making pottery" 
+              <img
+                src={manPotteryImage}
+                alt="Man making pottery"
                 className="pot-image man-pot"
               />
             </div>
           </div>
-          
+
           {/* Additional Content */}
           <div className="overview-mission">
             <h2 className="section-title">
@@ -64,7 +64,13 @@ const Overview = () => {
             <div className="title-underline"></div>
             <div className="mission-content">
               <p className="mission-text">
-                The Kullhad Economy Festival (KEF) celebrates the rich tradition of pottery and clay craftsmanship while promoting sustainable economic practices. This festival brings together artisans, entrepreneurs, and communities to showcase the beauty and utility of traditional clay vessels in modern contexts.
+                The Kullhad Economy Festival (KEF) is more than a festival — it is a movement for economic and cultural renewal.
+                For decades, the world has been driven by an extractive and marketing-led consumerist model — fast food, fast fashion, fast construction to name a few — built for repeat sales rather than enduring value. This has created debt, resource exhaustion, and social alienation.
+                KEF introduces an alternative: the Kullhad Economy. Drawing on Dharmic principles, ancient and Vedic techniques, and India’s grassroots wisdom, it champions production-driven economies that are:
+                Decentralised, empowering local producers and villages.
+                Sustainable, in harmony with nature and time-tested traditions.
+                Future-ready, blending tradition with cutting-edge technology.
+                Here, a potter’s wheel and a 3D printer don’t compete — they co-create the same dream of lasting value.
               </p>
               <p className="mission-text">
                 Our mission is to revive the kullhad culture, support local artisans, and create awareness about eco-friendly alternatives to plastic containers. Join us in this journey of preserving heritage while building a sustainable future.

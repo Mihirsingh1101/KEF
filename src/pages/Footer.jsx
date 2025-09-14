@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Instagram, Linkedin, Twitter, Youtube, Send, ArrowUp } from 'lucide-react';
+import { Instagram, Linkedin, Facebook, Youtube, Send, ArrowUp } from 'lucide-react';
 // 1. Import the Link component from react-router-dom
 import { Link } from 'react-router-dom';
 
@@ -86,10 +86,10 @@ const CulturalFooter = () => {
     ];
 
     const socialLinks = [
-        { Icon: Instagram, href: '#' },
+        { Icon: Instagram, href: 'https://www.instagram.com/kullhadeconomy?utm_source=qr&igsh=MTZna3prd2t5YjRydA==' },
         { Icon: Linkedin, href: '#' },
-        { Icon: Twitter, href: '#' },
-        { Icon: Youtube, href: '#' }
+        { Icon: Facebook, href: 'https://www.facebook.com/share/1AhEuijhoy/' },
+        { Icon: Youtube, href: 'https://youtube.com/@kullhadeconomy?si=OauH2FLr-ALHLQ22' }
     ];
 
     return (

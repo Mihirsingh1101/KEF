@@ -173,7 +173,7 @@ const CulturalFooter = () => {
 
                 {/* Footer Bottom */}
                 <div className="text-center text-gray-400 mt-12 pt-8 border-t border-amber-900/50 relative z-10">
-                    <p>&copy; {new Date().getFullYear()} Kullad Economy Fest. All Rights Reserved.</p>
+                    <p>&copy; {new Date().getFullYear()} Kullhad Economy Fest. All Rights Reserved.</p>
                 </div>
             </footer>
             <BackToTopButton />

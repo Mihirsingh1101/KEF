@@ -13,6 +13,7 @@ import Footer from './pages/Footer';
 import MainPage from './components/MainPage';
 import Aboutpage from './pages/Aboutpage';
 import SchedulePage from './pages/SchedulePage';
+import AdvisoryBoard from './pages/AdvisoryBoard';
 import Content from './pages/Content';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
@@ -78,6 +79,7 @@ function AnimatedRoutes() {
                 </>
               } />
               <Route path="/content" element={<Content />} />
+              <Route path="/advisory" element={<AdvisoryBoard />} />
 
               {/* Auth pages */}
               <Route path="/signin" element={<SignIn />} />

@@ -11,18 +11,6 @@ import pranshuPhoto from '../assets/pranshu.jpg';
 import piyushRoyPhoto from '../assets/piyush roy.jpg';
 import nitinKumarPhoto from '../assets/nitin kumar.jpg';
 import vaibhavDeepPhoto from '../assets/vabhav deep jaiswal.jpg';
-import ganpatiRamanathanPhoto from '../assets/ganpati ramanathan.jpeg';
-import vishalBindraPhoto from '../assets/vishal bindra.jpeg';
-import alokGuptaPhoto from '../assets/alok gupta.jpeg';
-import rohitPathakPhoto from '../assets/rohit pathak.jpeg';
-import anilSharmaPhoto from '../assets/anil sharma.png';
-import sankrantSanuPhoto from '../assets/sankrant sanu.jpeg';
-import anandPrakashPhoto from '../assets/Anand Prakash.jpg';
-import kanagaSabapathiPhoto from '../assets/Kanaga Sabapathi.jpg';
-import kanganaRanautPhoto from '../assets/kangana ranaut.jpeg';
-import lakshmidharBeheraPhoto from '../assets/lakshmidhar behera.png';
-import gautamDesirajuPhoto from '../assets/gautam desiraju.jpeg';
-import gantiMurthyPhoto from '../assets/ganti murthy.jpeg';
 
 import ajaySoniPhoto from '../assets/ajay soni.jpeg';
 import richaMishraPhoto from '../assets/richa mishra.jpeg';
@@ -97,79 +85,9 @@ const studentCouncilData = [
   },
 ];
 
-const advisoryBoardData = [
-  {
-    photoUrl: kanganaRanautPhoto,
-    name: 'Ms. Kangana Ranaut',
-    post: 'MP & Cultural Voice of Himachal, Cultural Leadership',
-  },
-  {
-    photoUrl: lakshmidharBeheraPhoto,
-    name: 'Prof. Lakshmidhar Behera',
-    post: 'Director, IIT Mandi, Academic Leadership',
-  },
-  {
-    photoUrl: Ajay_Thakur,
-    name: 'Mr. Ajay Thakur',
-    post: 'MP & Cultural Voice of Himachal, Cultural Leadership',
-  },
-  {
-    photoUrl: ganpatiRamanathanPhoto,
-    name: 'Prof. Ganpati Ramanathan',
-    post: 'National Advisor, Indigenous Innovation',
-  },
-  {
-    photoUrl: vishalBindraPhoto,
-    name: 'Mr. Vishal Bindra',
-    post: 'Business Leader, Business Development',
-  },
-  {
-    photoUrl: alokGuptaPhoto,
-    name: 'Mr. Alok Gupta',
-    post: 'Investor, Investment',
-  },
-  {
-    photoUrl: rohitPathakPhoto,
-    name: 'Mr. Rohit Pathak',
-    post: 'Business Leader, Business Strategy',
-  },
-  {
-    photoUrl: anilSharmaPhoto,
-    name: 'Mr. Anil Sharma',
-    post: 'Entrepreneur, Entrepreneurship',
-  },
-  {
-    photoUrl: sankrantSanuPhoto,
-    name: 'Mr. Sankrant Sanu',
-    post: 'Entrepreneur (GarudaLife), Entrepreneurship',
-  },
-  {
-    photoUrl: anandPrakashPhoto,
-    name: 'Mr. Anand Prakash',
-    post: 'President GI4QC',
-  },
-  {
-    photoUrl: kanagaSabapathiPhoto,
-    name: 'Prof. Kanaga Sabapathi',
-    post: 'Professor and Author',
-  },
-  
-  
-  
-  {
-    photoUrl: gautamDesirajuPhoto,
-    name: 'Prof. Gautam Desiraju',
-    post: 'Scientist and Cultural Patron, Science and Culture',
-  },
-  {
-    photoUrl: gantiMurthyPhoto,
-    name: 'Dr. Ganti Murthy',
-    post: 'IIT Indore, Academic Research',
-  },
-];
 
 const organizingCommitteeData = [
-  {
+   {
     photoUrl: ajayChaturvediPhoto,
     name: 'Prof. Ajay Chaturvedi',
     post: 'Visiting Faculty, General Chair / Convenor',
@@ -194,7 +112,6 @@ const organizingCommitteeData = [
     name: 'Ms. Prakriti Nigam',
     post: 'Chairperson, Being Shiva Foundation',
   },
-  
   {
     photoUrl: suryaPrakashPhoto,
     name: 'Dr. Surya Prakash Upadhyaya',
@@ -468,7 +385,6 @@ const KEFAboutUsPage = () => {
         </div>
       </section>
       {/* ===== PASTE THE NEW TEAM SECTIONS HERE ===== */}
-      <TeamCarousel title="Advisory Board" members={advisoryBoardData} styles={styles} />
       <TeamCarousel title="Organizing Committee" members={organizingCommitteeData} styles={styles} />
       <TeamCarousel title="Student Council" members={studentCouncilData} styles={styles} />
 

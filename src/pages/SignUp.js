@@ -6,7 +6,8 @@ import {
   GoogleAuthProvider,
   signInWithPopup,
 } from "firebase/auth";
-import { auth } from "../firebase";
+import { auth, db } from "../firebase";  // 👈 import db
+import { doc, setDoc } from "firebase/firestore"; // 👈 Firestore
 import { useNavigate, Link } from "react-router-dom";
 
 export default function SignUp() {
@@ -21,7 +22,19 @@ export default function SignUp() {
     setError("");
     try {
       const cred = await createUserWithEmailAndPassword(auth, email, password);
+
+      // update display name
       await updateProfile(cred.user, { displayName: name });
+
+      // 👇 create Firestore profile with default role "user"
+      await setDoc(doc(db, "users", cred.user.uid), {
+        uid: cred.user.uid,
+        name,
+        email,
+        role: "user",     // default role
+        createdAt: new Date(),
+      });
+
       navigate("/profile");
     } catch (err) {
       setError(err.message);
@@ -33,7 +46,16 @@ export default function SignUp() {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
-      console.log("Google user:", result.user);
+
+      // create Firestore profile if doesn't exist
+      await setDoc(doc(db, "users", result.user.uid), {
+        uid: result.user.uid,
+        name: result.user.displayName,
+        email: result.user.email,
+        role: "user",     // default role
+        createdAt: new Date(),
+      });
+
       navigate("/profile");
     } catch (err) {
       setError(err.message);
@@ -46,19 +68,16 @@ export default function SignUp() {
         onSubmit={handleSubmit}
         className="w-full max-w-md bg-white/20 backdrop-blur-lg p-8 rounded-2xl shadow-2xl border border-orange-200"
       >
-        {/* Title */}
         <h2 className="text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-red-600 via-orange-500 to-yellow-400 text-center mb-6">
           Create Your KEF Account
         </h2>
 
-        {/* Error */}
         {error && (
           <div className="text-sm text-red-600 bg-red-100 p-2 rounded mb-4 text-center">
             {error}
           </div>
         )}
 
-        {/* Inputs */}
         <input
           required
           placeholder="Full name"
@@ -83,7 +102,6 @@ export default function SignUp() {
           className="w-full mb-6 p-3 rounded-lg bg-white/40 border border-orange-200 focus:outline-none focus:ring-2 focus:ring-orange-400"
         />
 
-        {/* Call to Action (above button) */}
         <div className="mb-6 p-4 rounded-xl bg-gradient-to-r from-orange-200 via-yellow-100 to-red-100 text-center shadow-inner">
           <p className="text-lg font-semibold text-orange-800">
             Ready to become part of the movement?
@@ -94,7 +112,6 @@ export default function SignUp() {
           </p>
         </div>
 
-        {/* Sign Up button */}
         <button
           type="submit"
           className="w-full py-3 rounded-lg bg-gradient-to-r from-yellow-400 via-orange-500 to-red-600 text-white font-semibold shadow-lg hover:scale-105 transform transition"
@@ -102,14 +119,12 @@ export default function SignUp() {
           Create account
         </button>
 
-        {/* Divider */}
         <div className="flex items-center my-4">
           <hr className="flex-grow border-gray-400" />
           <span className="px-2 text-gray-600 text-sm">OR</span>
           <hr className="flex-grow border-gray-400" />
         </div>
 
-        {/* Google Sign Up */}
         <button
           type="button"
           onClick={handleGoogleSignUp}
@@ -123,7 +138,6 @@ export default function SignUp() {
           Continue with Google
         </button>
 
-        {/* Switch to Signin */}
         <p className="mt-5 text-sm text-center">
           Already have an account?{" "}
           <Link

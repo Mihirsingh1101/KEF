@@ -31,6 +31,7 @@ const Navbar = ({ onRegisterClick }) => {
     { name: "About", path: "/about" },
     { name: "Schedule", path: "/schedule" },
     { name: "Content", path: "/content" },
+    { name: "Advisory Board", path: "/advisory" },
   ];
 
   const handleLinkClick = (path) => {

@@ -44,19 +44,19 @@ const MainPage = () => {
           transition={{ duration: 1, delay: 1 }}
         >
           <h1
-            className="text-4xl md:text-5xl lg:text-6xl font-extrabold 
+            className="text-3xl md:text-5xl lg:text-3xl font-extrabold 
                        text-transparent bg-clip-text bg-gradient-to-r 
                        from-yellow-400 to-orange-500 drop-shadow-md"
           >
-            Divine Blessings
+            Welcome to the Kullhad Economy Festival 2025
           </h1>
 
           <p
             className="mt-6 text-lg md:text-xl leading-relaxed text-gray-200 
                        font-light tracking-wide"
           >
-            <span className="block italic text-yellow-300 text-lg md:text-xl font-medium mb-4">
-              “Welcome to the Kullhad Economy Festival 2025”
+            <span className="block italic text-yellow-200 text-lg md:text-xl font-medium mb-4">
+              IIT Mandi | 2nd–6th October 2025
             </span>
             From the heart of Himachal Pradesh, IIT Mandi presents the{" "}
             <span className="text-yellow-400 font-semibold">

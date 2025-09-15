@@ -24,8 +24,9 @@ import shefaliVaidyaPhoto from '../assets/shefali vaidya.jpg';
 import paritoshSharmaPhoto from '../assets/Paritosh Sharma.jpg';
 import bhupendraMondalPhoto from '../assets/bhupendra mondal.jpg';
 import bijitSinghaPhoto from '../assets/bijit singha.jpg';
-
-import Ajay_Thakur from '../assets/Anurag.jpg'
+import Sneha from '../assets/Sneha Dar.jpg'
+import Mihir from '../assets/Mihir.jpg'
+import Dhruv from '../assets/Dhruv.jpg'
 // ========================================================================
 // CODE TO APPEND: Team Data and Reusable Carousel Component
 // ========================================================================
@@ -59,21 +60,6 @@ const studentCouncilData = [
     post: 'PhD Scholar, IIT Mandi Head-Hospitality',
   },
   {
-    photoUrl: nakulKumarPhoto,
-    name: 'Nakul Kumar',
-    post: 'B.Tech Undergrad, IIT Mandi Head-Social Media',
-  },
-  {
-    photoUrl: pranshuPhoto,
-    name: 'Pranshu',
-    post: 'B.Tech Undergrad, IIT Mandi Head-Community & Artisan Engagementg',
-  },
-  {
-    photoUrl: piyushRoyPhoto,
-    name: 'Piyush Roy',
-    post: 'B.Tech Undergrad, IIT Mandi Strategy Advisor',
-  },
-  {
     photoUrl: nitinKumarPhoto,
     name: 'Nitin Kumar',
     post: 'Ph.D. Scholar, IIT Mandi Head-Research and Curation', // Placeholder - Please update post
@@ -83,11 +69,42 @@ const studentCouncilData = [
     name: 'Vaibhav Deep Jaiswal',
     post: 'Research scholar, IIT Mandi Research Curator', // Placeholder - Please update post
   },
+  {
+    photoUrl: nakulKumarPhoto,
+    name: 'Nakul Kumar',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Social Media',
+  },
+  {
+    photoUrl: piyushRoyPhoto,
+    name: 'Piyush Roy',
+    post: 'B.Tech Undergrad, IIT Mandi Strategy Advisor',
+  },
+  {
+    photoUrl: pranshuPhoto,
+    name: 'Pranshu',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Community & Artisan Engagementg',
+  },
+  {
+    photoUrl: Sneha,
+    name: 'Sneha Dar',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Decor Team',
+  },
+  {
+    photoUrl: Mihir,
+    name: 'Mihir Singh',
+    post: 'I-MBA Undergrad, IIT Mandi Head-Webdev Team',
+  },
+  {
+    photoUrl: Dhruv,
+    name: 'Dhruv Makhija',
+    post: 'I-MBA Undergrad, IIT Mandi Head-Webdev Team',
+  },
+
 ];
 
 
 const organizingCommitteeData = [
-   {
+  {
     photoUrl: ajayChaturvediPhoto,
     name: 'Prof. Ajay Chaturvedi',
     post: 'Visiting Faculty, General Chair / Convenor',
@@ -295,15 +312,6 @@ const KEFAboutUsPage = () => {
     return () => elements.forEach((el) => observer.unobserve(el));
   }, []);
 
-  const sponsors = [
-    'https://cdn.worldvectorlogo.com/logos/google-2015.svg',
-    'https://cdn.worldvectorlogo.com/logos/microsoft-5.svg',
-    'https://cdn.worldvectorlogo.com/logos/meta-1.svg',
-    'https://cdn.worldvectorlogo.com/logos/netflix-2.svg',
-    'https://cdn.worldvectorlogo.com/logos/samsung-4.svg',
-    'https://cdn.worldvectorlogo.com/logos/red-bull-1.svg',
-    'https://cdn.worldvectorlogo.com/logos/state-bank-of-india-1.svg',
-  ];
 
   return (
     <div style={styles.page}>
@@ -329,30 +337,30 @@ const KEFAboutUsPage = () => {
       </header>
 
       {/* ===== About Section ===== */}
-     <section
-  id="about"
-  className="flex justify-center px-4 py-16 bg-gradient-to-br from-red-600 via-orange-500 to-yellow-400"
->
-  <div className="max-w-4xl p-10 rounded-2xl shadow-xl bg-white/20 backdrop-blur-md transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(255,140,0,0.4)]">
-    <h2 className="text-3xl md:text-4xl font-bold text-red-900 mb-6 text-center tracking-wide drop-shadow-lg">
-      Kullhad Economy Festival 2025
-    </h2>
-    <p className="text-lg leading-relaxed text-yellow-50 text-justify">
-      Drawing from ancient Dharmic wisdom and combining it with modern innovation, Ajay brings together communities, students, artisans, business leaders, and policymakers to reimagine India’s role in shaping a sustainable global economy.
-      Recognised as a Young Global Leader by the World Economic Forum, Youth Icon by many organisations, Founder of HarVa XPO, Kautilya Fellowship Network, and the Kullhad Economy, Ajay has consistently championed the idea that true wealth is created not by exploiting nature, but by flowing with it.
-      His guiding philosophy:
-      <br /><br />
-      <em className="block text-xl font-semibold italic text-yellow-200 text-center my-6 tracking-wide drop-shadow-md">
-        “He who wrote the first book, hadn’t read a book – be that man, every moment.”
-      </em>
-      The fundamental principle that drives the Kullhad Economy is Critical Thinking aligned with Nature and Time.
-      Through KEF, Ajay invites the world to move:
-      <br />• from <span className="text-yellow-200 font-semibold">consumerism</span> to <span className="text-yellow-300 font-semibold">creation</span>,
-      <br />• from <span className="text-yellow-200 font-semibold">extraction</span> to <span className="text-yellow-300 font-semibold">circulation</span>,
-      <br />• from <span className="text-yellow-200 font-semibold">fast and fleeting</span> to <span className="text-yellow-300 font-semibold">lasting and Dharmic</span>.
-    </p>
-  </div>
-</section>
+      <section
+        id="about"
+        className="flex justify-center px-4 py-16 bg-gradient-to-br from-red-600 via-orange-500 to-yellow-400"
+      >
+        <div className="max-w-4xl p-10 rounded-2xl shadow-xl bg-white/20 backdrop-blur-md transition-transform duration-500 hover:-translate-y-2 hover:shadow-[0_12px_30px_rgba(255,140,0,0.4)]">
+          <h2 className="text-3xl md:text-4xl font-bold text-red-900 mb-6 text-center tracking-wide drop-shadow-lg">
+            Kullhad Economy Festival 2025
+          </h2>
+          <p className="text-lg leading-relaxed text-yellow-50 text-justify">
+            Drawing from ancient Dharmic wisdom and combining it with modern innovation, Ajay brings together communities, students, artisans, business leaders, and policymakers to reimagine India’s role in shaping a sustainable global economy.
+            Recognised as a Young Global Leader by the World Economic Forum, Youth Icon by many organisations, Founder of HarVa XPO, Kautilya Fellowship Network, and the Kullhad Economy, Ajay has consistently championed the idea that true wealth is created not by exploiting nature, but by flowing with it.
+            His guiding philosophy:
+            <br /><br />
+            <em className="block text-xl font-semibold italic text-yellow-200 text-center my-6 tracking-wide drop-shadow-md">
+              “He who wrote the first book, hadn’t read a book – be that man, every moment.”
+            </em>
+            The fundamental principle that drives the Kullhad Economy is Critical Thinking aligned with Nature and Time.
+            Through KEF, Ajay invites the world to move:
+            <br />• from <span className="text-yellow-200 font-semibold">consumerism</span> to <span className="text-yellow-300 font-semibold">creation</span>,
+            <br />• from <span className="text-yellow-200 font-semibold">extraction</span> to <span className="text-yellow-300 font-semibold">circulation</span>,
+            <br />• from <span className="text-yellow-200 font-semibold">fast and fleeting</span> to <span className="text-yellow-300 font-semibold">lasting and Dharmic</span>.
+          </p>
+        </div>
+      </section>
 
 
 
@@ -405,11 +413,23 @@ const KEFAboutUsPage = () => {
 // --- STYLES ---
 const styles = {
   page: {
-    background: 'linear-gradient(to bottom, #FF512F, #F09819, #FFD200)', 
-    color: '#3B0A00',
+    background: "linear-gradient(to bottom, #fff7e6, #fffbea, #ffffff)", // soft cream → white
+    color: "#3B0A00",
     fontFamily: "'Inter', sans-serif",
     backgroundImage: "url('https://www.transparenttextures.com/patterns/light-paper-fibers.png')",
   },
+  heroSection: {
+    minHeight: "100vh",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
+    background: "linear-gradient(135deg, #fff3e0, #ffe0b2, #ffffff)", // soft peach → white
+    position: "relative",
+    overflow: "hidden",
+    color: "#3B0A00",
+    textAlign: "center",
+  },
+
   kefLogo: {
     height: '50px',
     width: '50px',
@@ -421,17 +441,6 @@ const styles = {
     fontSize: '1.5rem',
     fontWeight: '700',
     color: '#FF6F00', // deep orange
-  },
-  heroSection: {
-    minHeight: '100vh',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'linear-gradient(135deg, #FF512F, #FF7B54, #FFD200)', 
-    position: 'relative',
-    overflow: 'hidden',
-    color: '#fff',
-    textAlign: 'center'
   },
   heroContent: {
     zIndex: 2,

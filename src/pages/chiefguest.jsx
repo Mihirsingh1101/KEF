@@ -1,6 +1,6 @@
 import React from "react";
 import guest1 from "../assets/kangana ranaut.jpeg"
-import guest2 from "../assets/Anurag_Thakur.jpg"
+import guest2 from "../assets/Anurag.jpg"
 
 export default function ChiefGuests() {
   const guests = [
@@ -16,7 +16,7 @@ export default function ChiefGuests() {
       name: "Mr Anurag Thakur",
       title: "Social Reformer | Cultural Icon",
       img: guest2, // replace with actual image path
-      bio: "Prof. [Guest Name 2] brings invaluable insights as a Chief Guest of KEF 2025. Their tireless efforts in uplifting communities and preserving heritage resonate with the values of this festival.",
+      bio: "Mr Anurag Thakur brings invaluable insights as a Chief Guest of KEF 2025. Their tireless efforts in uplifting communities and preserving heritage resonate with the values of this festival.",
       quote:
         "“Culture is the heartbeat of a community, binding generations together.”",
     },

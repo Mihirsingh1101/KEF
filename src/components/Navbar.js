@@ -52,15 +52,18 @@ const Navbar = ({ onRegisterClick }) => {
 
   return (
     <nav
-      className={`fixed top-0 w-full z-40 transition-all duration-300 ${
-        scrolled || isOpen ? "backdrop-blur-md bg-[#3B231A]/40 shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 w-full z-40 transition-all duration-300 ${scrolled || isOpen ? "backdrop-blur-md bg-[#3B231A]/40 shadow-lg" : "bg-transparent"
+        }`}
     >
       <div className="flex items-center justify-between px-6 md:px-12 py-4">
         {/* Logo */}
-        <Link to="/" className="relative text-3xl md:text-4xl font-extrabold cursor-pointer bg-gradient-to-r from-yellow-200 via-yellow-400 to-white bg-clip-text text-transparent animate-pulse">
-          𝓚𝓔𝓕 𝟚𝟘𝟚𝟝
+        <Link
+          to="/"
+          className="relative text-3xl md:text-4xl font-bold font-serif cursor-pointer bg-gradient-to-r from-yellow-200 via-yellow-400 to-white bg-clip-text text-transparent"
+        >
+          KEF 2025
         </Link>
+
 
         {/* Mobile Menu */}
         <div className={`md:hidden absolute top-0 left-0 w-full h-screen bg-[#26170F] transform transition-transform duration-500 ease-in-out ${isOpen ? "translate-x-0" : "-translate-x-full"}`}>

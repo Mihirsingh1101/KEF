@@ -19,7 +19,8 @@ import Content from './pages/Content';
 import Overview from './pages/Overview';
 import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
-import Artist from './pages/Artist';
+import Artist from './pages/Artist'
+import ChiefGuest from './pages/chiefguest';
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -77,6 +78,7 @@ function AnimatedRoutes() {
               <Route path="/about" element={<Aboutpage />} />
               <Route path="/schedule" element={
                 <> <SchedulePage />
+                <ChiefGuest/>
                   <Artist />
                 </>
               } />

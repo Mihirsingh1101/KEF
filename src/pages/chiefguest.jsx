@@ -1,6 +1,6 @@
 import React from "react";
 import guest1 from "../assets/kangana ranaut.jpeg"
-import guest2 from "../assets/Anurag_Thakur.jpg"
+import guest2 from "../assets/Anurag.jpg"
 
 export default function ChiefGuests() {
   const guests = [

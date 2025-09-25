@@ -54,7 +54,7 @@ const InteractiveTimeline = ({ activeDay, setActiveDay }) => {
             <div className="absolute top-1/2 left-0 w-full h-1 bg-gray-400 rounded-full transform -translate-y-1/2"></div>
             <div className="absolute top-1/2 left-0 h-1 bg-[#9A3B3B] rounded-full transform -translate-y-1/2" style={{ width: `${position}%` }}></div>
             <div className="absolute top-1/2 transform -translate-y-1/2 -translate-x-1/2 transition-all duration-100" style={{ left: `${position}%` }}>
-              <img src="/KEF/wheel.png" alt="Timeline Wheel" className="w-16 h-16 transition-transform duration-300 ease-out drop-shadow-lg" style={{ transform: `rotate(${position * 3.6}deg)` }} />
+              <img src="https://kef.iitmandi.ac.in/wheel.png" alt="Timeline Wheel" className="w-16 h-16 transition-transform duration-300 ease-out drop-shadow-lg" style={{ transform: `rotate(${position * 3.6}deg)` }} />
             </div>
             <input type="range" min="0" max="100" step="0.1" value={position} onChange={handleSliderChange} className="absolute w-full h-full appearance-none bg-transparent cursor-pointer z-20" style={{'--thumb-size': '4rem'}} />
             <div className="absolute top-1/2 left-0 w-full flex justify-between items-center z-10">

@@ -1,6 +1,6 @@
 import React from "react";
 import { motion } from "framer-motion";
-import introGif from "./arti.gif";
+import introGif from "./front.gif";
 
 const GifIntro = () => {
   return (

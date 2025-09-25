@@ -11,7 +11,6 @@ const artists = [
   {
     name: 'Rohan Joshi',
     role: 'Textile Weaver',
-    imageUrl: Ajay,
   },
   {
     name: 'Priya Verma',

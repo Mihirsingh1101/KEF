@@ -9,6 +9,7 @@ import { AuthProvider } from './context/AuthContext';
 import GifIntro from './components/GifIntro';
 import Navbar from './components/Navbar';
 import Footer from './pages/Footer';
+import NewsTicker from './components/NewsTicker'; // 🔹 Import NewsTicker
 
 import MainPage from './components/MainPage';
 import Aboutpage from './pages/Aboutpage';
@@ -57,7 +58,8 @@ function AnimatedRoutes() {
       {!isLoading && (
         <>
           <Navbar />
-          <main style={{ flex: '1 0 auto' }}>
+          <main style={{ flex: '1 0 auto', paddingBottom: '50px' }}> 
+            {/* paddingBottom ensures content won’t overlap with ticker */}
             <Routes location={location} key={location.pathname}>
               {/* Main page with sections */}
               <Route
@@ -97,6 +99,7 @@ function AnimatedRoutes() {
             </Routes>
           </main>
           <Footer />
+          <NewsTicker /> {/* 🔹 Always visible at bottom */}
         </>
       )}
     </>
@@ -107,7 +110,6 @@ function App() {
   return (
     <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AuthProvider>
-        {/* <Router basename="/KEF"> */}
         <Router>
           <AnimatedRoutes />
         </Router>

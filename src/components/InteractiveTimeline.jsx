@@ -46,7 +46,7 @@ const InteractiveTimeline = ({ activeDay, setActiveDay }) => {
   return (
     <section className="bg-[#F3E9DD] py-20 px-4">
       <div className="container mx-auto max-w-4xl">
-        <h2 className="text-center text-3xl font-bold text-[#9A3B3B] mb-16" style={{ fontFamily: "'Playfair Display', serif" }}>
+        <h2 className="text-center text-3xl font-bold text-[#9A3B3B] mb-16 mt-8" style={{ fontFamily: "'Playfair Display', serif" }}>
           Timeline
         </h2>
         <div className="relative w-full flex items-center justify-center">

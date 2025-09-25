@@ -26,7 +26,7 @@ const MainPage = () => {
         <motion.img
           src={maaKaliImage}
           alt="Festival Logo"
-          className="w-56 md:w-72 lg:w-80 mb-6 drop-shadow-2xl"
+          className="w-58 md:w-72 lg:w-82 mt-8 drop-shadow-2xl"
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{

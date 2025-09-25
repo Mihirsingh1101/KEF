@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { AnimatePresence } from 'framer-motion';
 import { HashRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
+import ScrollToTop from './components/ScrollToTop';
 
 // Firebase Auth context
 import { AuthProvider } from './context/AuthContext';
@@ -58,7 +59,8 @@ function AnimatedRoutes() {
       {!isLoading && (
         <>
           <Navbar />
-          <main style={{ flex: '1 0 auto' }}> 
+          <NewsTicker /> {/* 🔹 Add NewsTicker here */}
+          <main style={{ flex: '1 0 auto' }}>
             {/* paddingBottom ensures content won’t overlap with ticker */}
             <Routes location={location} key={location.pathname}>
               {/* Main page with sections */}
@@ -78,7 +80,7 @@ function AnimatedRoutes() {
               <Route path="/about" element={<Aboutpage />} />
               <Route path="/schedule" element={
                 <> <SchedulePage />
-                <ChiefGuest/>
+                  <ChiefGuest />
                   <Artist />
                 </>
               } />
@@ -99,7 +101,6 @@ function AnimatedRoutes() {
             </Routes>
           </main>
           <Footer />
-          <NewsTicker /> {/* 🔹 Always visible at bottom */}
         </>
       )}
     </>
@@ -111,6 +112,7 @@ function App() {
     <div className="App" style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh' }}>
       <AuthProvider>
         <Router>
+          <ScrollToTop />
           <AnimatedRoutes />
         </Router>
       </AuthProvider>

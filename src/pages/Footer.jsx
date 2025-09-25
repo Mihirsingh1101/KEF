@@ -87,7 +87,6 @@ const CulturalFooter = () => {
 
     const socialLinks = [
         { Icon: Instagram, href: 'https://www.instagram.com/kullhadeconomy?utm_source=qr&igsh=MTZna3prd2t5YjRydA==' },
-        { Icon: Linkedin, href: '#' },
         { Icon: Facebook, href: 'https://www.facebook.com/share/1AhEuijhoy/' },
         { Icon: Youtube, href: 'https://youtube.com/@kullhadeconomy?si=OauH2FLr-ALHLQ22' }
     ];
@@ -125,26 +124,6 @@ const CulturalFooter = () => {
                         </ul>
                     </div>
 
-                    {/* Newsletter Subscription */}
-                    <div className="space-y-4">
-                        <h3 className="text-xl font-semibold text-amber-400">Stay Connected</h3>
-                        <p className="text-gray-300">Join our community for the latest updates.</p>
-                        <form className="flex">
-                            <input
-                                type="email"
-                                placeholder="Your Email"
-                                className="w-full py-2 px-4 bg-gray-800/50 border border-amber-800 rounded-l-lg focus:outline-none focus:border-amber-500"
-                            />
-                            <motion.button
-                                type="submit"
-                                className="bg-gradient-to-r from-amber-500 to-orange-600 px-4 py-2 rounded-r-lg"
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                            >
-                                <Send size={20} />
-                            </motion.button>
-                        </form>
-                    </div>
 
                     {/* Social Media Section */}
                     <div className="space-y-4">

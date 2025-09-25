@@ -49,11 +49,24 @@ const NewsTicker = () => {
         animate={{ x: ["100%", "-100%"] }}
         transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
       >
-        {news.map((item) => (
-          <span key={item.id} className="flex items-center gap-2">
-            📰 <strong>{item.title}</strong> — {item.text?.slice(0, 80)}...
-          </span>
-        ))}
+        {/* 🔄 CHANGED: Conditionally render links for news items */}
+        {news.map((item) =>
+          item.link ? (
+            <a
+              key={item.id}
+              href={item.link}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 hover:text-orange-400 transition-colors"
+            >
+              📰 <strong>{item.title}</strong> — {item.text?.slice(0, 80)}...
+            </a>
+          ) : (
+            <span key={item.id} className="flex items-center gap-2">
+              📰 <strong>{item.title}</strong> — {item.text?.slice(0, 80)}...
+            </span>
+          )
+        )}
       </motion.div>
     </div>
   );

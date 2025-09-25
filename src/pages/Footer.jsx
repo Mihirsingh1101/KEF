@@ -94,7 +94,7 @@ const CulturalFooter = () => {
 
     return (
         <>
-            <footer className="relative bg-[#26170F] dark:bg-black text-white py-12 px-8 overflow-hidden border-t-4 border-amber-600">
+            <footer className="relative bg-[#26170F] dark:bg-black text-white py-12 px-10 overflow-hidden border-t-4 border-amber-600">
                 {/* Floating Background Symbols */}
                 <FloatingSymbol duration={10} delay={0} position={{ top: '10%', left: '5%' }}><DiyaIcon className="w-24 h-24" /></FloatingSymbol>
                 <FloatingSymbol duration={12} delay={2} position={{ top: '50%', right: '10%' }}><KulladIcon className="w-20 h-20" /></FloatingSymbol>

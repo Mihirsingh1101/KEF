@@ -5,14 +5,6 @@ import guest2 from "../assets/Anurag.jpg"
 export default function ChiefGuests() {
   const guests = [
     {
-      name: "Ms. Kangana Ranaut",
-      title: "MP & Cultural Voice of Himachal, Cultural Leadership",
-      img: guest1, 
-      bio: "We are honored to welcome  as a Chief Guest of KEF 2025. With decades of contribution to education, culture, and social development, their presence adds immense inspiration to this year’s festival.",
-      quote:
-        "“Knowledge is not power until it transforms the lives of people.”",
-    },
-    {
       name: "Mr Anurag Thakur",
       title: "Social Reformer | Cultural Icon",
       img: guest2, // replace with actual image path

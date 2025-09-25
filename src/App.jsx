@@ -58,7 +58,7 @@ function AnimatedRoutes() {
       {!isLoading && (
         <>
           <Navbar />
-          <main style={{ flex: '1 0 auto', paddingBottom: '50px' }}> 
+          <main style={{ flex: '1 0 auto' }}> 
             {/* paddingBottom ensures content won’t overlap with ticker */}
             <Routes location={location} key={location.pathname}>
               {/* Main page with sections */}

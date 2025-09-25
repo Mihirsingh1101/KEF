@@ -2,6 +2,8 @@ import React from 'react';
 // Sample data for artists - you can fetch this from an API
 
 import Ajay from '../assets/Anurag_Thakur.jpg'
+import Mohit from '../assets/Mohit Chauhan.webp'
+import vivek from '../assets/Vivek Agnihotri.webp'
 const artists = [
   {
     name: 'Ajay Thakur',
@@ -11,12 +13,12 @@ const artists = [
   {
     name: 'Mohit Chauhan',
     role: 'Bollywood Playback Singer',
-    imageUrl : ""
+    imageUrl : Mohit
   },
     {
     name: 'Vivek Agnihotri',
     role: 'Indian Director',
-    imageUrl : ""
+    imageUrl : vivek
   },
  
 ];

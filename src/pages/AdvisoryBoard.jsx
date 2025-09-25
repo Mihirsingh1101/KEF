@@ -17,11 +17,6 @@ import gantiMurthyPhoto from '../assets/ganti murthy.jpeg';
 
 const advisoryBoardData = [
     {
-        photoUrl: kanganaRanautPhoto,
-        name: 'Ms. Kangana Ranaut',
-        post: 'MP & Cultural Voice of Himachal, Cultural Leadership',
-    },
-    {
         photoUrl: lakshmidharBeheraPhoto,
         name: 'Prof. Lakshmidhar Behera',
         post: 'Director, IIT Mandi, Academic Leadership',

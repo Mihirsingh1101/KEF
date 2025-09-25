@@ -9,19 +9,16 @@ const artists = [
     imageUrl: Ajay, // Placeholder image
   },
   {
-    name: 'Rohan Joshi',
-    role: 'Textile Weaver',
+    name: 'Mohit Chauhan',
+    role: 'Bollywood Playback Singer',
+    imageUrl : ""
   },
-  {
-    name: 'Priya Verma',
-    role: 'Madhubani Painter',
-    imageUrl: 'https://images.unsplash.com/photo-1582233479572-9a05a4670576?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Placeholder image
+    {
+    name: 'Vivek Agnihotri',
+    role: 'Indian Director',
+    imageUrl : ""
   },
-   {
-    name: 'Vikram Singh',
-    role: 'Wood Carver',
-    imageUrl: 'https://images.unsplash.com/photo-1596726134225-9c8a192152a8?q=80&w=1887&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D', // Placeholder image
-  },
+ 
 ];
 
 // Reusable Artist Card Component

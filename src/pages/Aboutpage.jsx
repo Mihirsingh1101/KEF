@@ -29,6 +29,9 @@ import Mihir from '../assets/Mihir.jpg'
 import Dhruv from '../assets/Dhruv.jpg'
 import Devansh from '../assets/Devansh.jpg'
 import Daksh from '../assets/Daksh.jpg'
+import hansraj from '../assets/Hansraj.jpg'
+import Devprakash from '../assets/Devprakash.jpg'
+import Satyansh from '../assets/satyansh.jpg'
 // ========================================================================
 // CODE TO APPEND: Team Data and Reusable Carousel Component
 // ========================================================================
@@ -110,6 +113,21 @@ const studentCouncilData = [
     photoUrl: Daksh,
     name: 'Daksh Bidhuri',
     post: 'B.Tech Undergrad, IIT Mandi Head-Security',
+  },
+      {
+    photoUrl: hansraj,
+    name: 'Hansraj',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Finance',
+  },
+      {
+    photoUrl: Devprakash,
+    name: 'Devprakash',
+    post: 'B.Tech Undergrad, IIT Mandi Head-Hospitality',
+  },
+      {
+    photoUrl: Satyansh,
+    name: 'Satyansh',
+    post: 'B.Tech Undergrad, IIT Mandi Joint Head',
   },
 
 ];

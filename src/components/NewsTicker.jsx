@@ -47,7 +47,8 @@ const NewsTicker = () => {
       <motion.div
         className="flex gap-12 whitespace-nowrap py-2 text-sm text-orange-200"
         animate={{ x: ["100%", "-100%"] }}
-        transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
+        // ✨ Changed duration from 10 to 5 to double the speed
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
       >
         {news.map((item) =>
           item.link ? (
@@ -58,7 +59,7 @@ const NewsTicker = () => {
               rel="noopener noreferrer"
               className="flex items-center gap-2 hover:text-orange-400 transition-colors"
             >
-              📰 <strong>{item.title}</strong> — {item.text?.slice(0, 80)}...
+              🔗 <strong>{item.title}</strong> — {item.text?.slice(0, 80)}...
             </a>
           ) : (
             <span key={item.id} className="flex items-center gap-2">

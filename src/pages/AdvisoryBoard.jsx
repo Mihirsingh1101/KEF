@@ -76,7 +76,7 @@ const advisoryBoardData = [
 
 const AdvisoryBoard = () => {
   return (
-    <div className="pt-24 p-8 bg-gradient-to-b from-white to-gray-100 min-h-screen">
+    <div className="pt-24 p-8 bg-gradient-to-b mt-8 from-white to-gray-100 min-h-screen">
       {/* 👆 Added pt-24 (96px padding-top) to push below navbar */}
       
       <h1 className="text-3xl font-bold text-center mb-10 text-gray-800">

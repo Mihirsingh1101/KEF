@@ -203,25 +203,7 @@ const KnowledgeHub = () => {
      <div className="bg-gradient-to-b from-red-900 via-orange-900 to-yellow-900 dark:from-black dark:via-gray-900 dark:to-black min-h-screen flex flex-col text-gray-200 transition-colors">
 
 
-            {/* Dark Mode Toggle */}
-            <motion.button
-                onClick={() => setIsDarkMode(!isDarkMode)}
-                className="fixed top-6 right-6 z-50 p-3 rounded-full bg-white/20 dark:bg-gray-800/50 backdrop-blur-sm shadow-lg"
-                whileHover={{ scale: 1.1 }}
-                whileTap={{ scale: 0.9 }}
-            >
-                <AnimatePresence mode="wait">
-                    <motion.div
-                        key={isDarkMode ? 'moon' : 'sun'}
-                        initial={{ opacity: 0, rotate: -90 }}
-                        animate={{ opacity: 1, rotate: 0 }}
-                        exit={{ opacity: 0, rotate: 90 }}
-                        transition={{ duration: 0.3 }}
-                    >
-                        {isDarkMode ? <Sun className="text-yellow-400" /> : <Moon className="text-gray-800" />}
-                    </motion.div>
-                </AnimatePresence>
-            </motion.button>
+            
 
             {/* Hero Section */}
             <header className="relative h-[60vh] flex items-center justify-center overflow-hidden">

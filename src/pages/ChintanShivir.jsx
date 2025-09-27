@@ -119,30 +119,51 @@ const ChintanShivir = () => {
 
   // ...
   return (
-    <div className="bg-[#4a2511] min-h-screen text-white font-sans overflow-hidden pt-28" style={{ backgroundImage: 'url("/assets/background-pattern.png")', backgroundRepeat: 'repeat', backgroundSize: '400px' }}>
+    <div className="bg-[#4a2511] min-h-screen text-white font-sans overflow-hidden pt-28" >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
 
             {/* Header Section */}
-            <header className="flex justify-between items-center mb-8">
-                <img src = "/Mylogo.png" alt="KEF Logo" className="h-24 w-24 object-contain" />
-                <div className="text-center">
-                    <h1 className="text-5xl md:text-7xl font-serif font-extrabold text-[#f7d57e]">KEF 2025</h1>
-                    <p className="text-2xl md:text-3xl font-serif text-white">Kullhad Economy Festival</p>
-                    <p className="text-lg text-amber-100 mt-1">Experience, Learn, Celebrate</p>
-                    <p className="text-xl font-semibold text-white mt-2">The Dharmic Way (2 - 5 October)</p>
-                </div>
-            </header>
+            <div className="px-4">
 
-            {/* Chintan Shivir Workshop Section */}
-            <section className="text-center my-16">
-                <h2 className="text-2xl text-amber-200 tracking-widest">HALF-DAY WORKSHOP (BY INVITE ONLY)</h2>
-                <h1 className="text-5xl font-serif font-bold text-[#f7d57e] my-4">CHINTAN SHIVIR</h1>
-                <p className="text-2xl max-w-4xl mx-auto italic text-amber-100">
-                    Theme: "Viksit Bharat and Rashtra Dharma: Blending Knowledge, Science, and Dharmic Design for a Sustainable Future"
-                </p>
-                <p className="text-xl font-bold mt-4 text-white">5<sup>th</sup> October Morning, At IIT Mandi</p>
-            </section>
+    <header className="text-center items-center mb-8">
+        <div className="text-center">
+            {/* Smaller base size, scales up on medium (md) screens */}
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#f7d57e]">
+                KEF 2025
+            </h1>
+            {/* Scaled down subtitle */}
+            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-white mt-1">
+                Kullhad Economy Festival
+            </p>
+            <p className="text-md sm:text-lg text-amber-100 mt-2">
+                Experience, Learn, Celebrate
+            </p>
+            <p className="text-lg sm:text-xl font-semibold text-white mt-3">
+                The Dharmic Way (2 - 5 October)
+            </p>
+        </div>
+    </header>
+
+    {/* Chintan Shivir Workshop Section */}
+    {/* Reduced vertical margin on mobile (my-12), larger on medium screens (md:my-16) */}
+    <section className="text-center my-12 md:my-16">
+        <h2 className="text-lg sm:text-xl text-amber-200 tracking-widest uppercase">
+            Half-Day Workshop (By Invite Only)
+        </h2>
+        {/* Scaled down heading */}
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#f7d57e] my-3">
+            CHINTAN SHIVIR
+        </h1>
+        <p className="text-lg sm:text-xl max-w-4xl mx-auto italic text-amber-100">
+            Theme: "Viksit Bharat and Rashtra Dharma: Blending Knowledge, Science, and Dharmic Design for a Sustainable Future"
+        </p>
+        <p className="text-lg sm:text-xl font-bold mt-4 text-white">
+            5<sup>th</sup> October Morning, At IIT Mandi
+        </p>
+    </section>
+
+</div>
 
             {/* Key Themes Section */}
             <section className="my-16 max-w-5xl mx-auto">

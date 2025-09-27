@@ -12,21 +12,6 @@ export default function Overview() {
 
   return (
     <section id="overview" className="min-h-screen flex flex-col lg:flex-row">
-      {/* Left Section */}
-      <div className="flex-1 flex items-center justify-center bg-gradient-to-br from-[#5c4033] via-[#654321] to-[#3e2723] relative p-8">
-        <div className="max-w-lg">
-          <h1 className="font-rye text-4xl md:text-5xl text-[#f9f5e9] leading-tight mb-6 drop-shadow-lg">
-            Do you have any clay pots in your home?
-          </h1>
-          <div className="bg-[#f9f5e9]/90 rounded-lg shadow-lg p-6 backdrop-blur">
-            <p className="text-lg font-zodiak text-[#5c4033] leading-relaxed">
-              Clay or ceramic pieces can be found in many different places in
-              the home. From your kitchen bowls to your garden pots, clay is a
-              versatile and popular material.
-            </p>
-          </div>
-        </div>
-      </div>
 
       {/* Right Section */}
       <div className="flex-1 flex flex-col items-center justify-center bg-[#f9f5e9] p-8">

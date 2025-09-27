@@ -12,26 +12,26 @@ const Objectives = () => {
   const objectives = [
     {
       image: clayVesselImg,
-      title: 'Promote Core Philosophy',
-      text: 'Foster awareness about sustainable practices and the environmental benefits of using traditional clay vessels over plastic alternatives.',
+      title: 'Reorient Economies from Consumption to Production:',
+      text: 'Showcase sustainable models of agriculture, manufacturing, and local enterprise',
       side: 'left'
     },
     {
       image: communityImg,
-      title: 'Community Platform',
+      title: 'Bridge Tradition with Technology:',
       text: 'Create a collaborative space where artisans, entrepreneurs, and community members can connect, share knowledge, and build lasting partnerships.',
       side: 'right'
     },
     {
       image: regionalArtImg,
-      title: 'Showcase Regional Work',
-      text: 'Highlight the diverse pottery traditions and craftsmanship from different regions, celebrating the rich cultural heritage of clay artistry.',
+      title: 'Create a Universal Platform:',
+      text: 'Connect farmers, artisans, students, technologists, entrepreneurs, policymakers, business leaders, sponsors, investors, media, and cultural artists.',
       side: 'left'
     },
     {
       image: natureFriendlyImg,
-      title: 'Environmental Impact',
-      text: 'Reduce plastic waste by promoting eco-friendly clay alternatives that are biodegradable and support a circular economy for sustainable living.',
+      title: 'Celebrate the Kullhad as a Symbol:',
+      text: 'Eco-friendly, indigenous, humble yet profound — an emblem of circular prosperity.',
       side: 'right'
     }
   ];

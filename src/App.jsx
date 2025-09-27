@@ -22,6 +22,7 @@ import Objectives from './pages/Objectives';
 import KeyFeatures from './pages/KeyFeatures';
 import Artist from './pages/Artist'
 import ChiefGuest from './pages/chiefguest';
+import ChintanShivir from './pages/ChintanShivir';
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -86,6 +87,7 @@ function AnimatedRoutes() {
               } />
               <Route path="/content" element={<Content />} />
               <Route path="/advisory" element={<AdvisoryBoard />} />
+              <Route path="/ChintanShivir" element={<ChintanShivir />} />
 
               {/* Auth pages */}
               <Route path="/signin" element={<SignIn />} />

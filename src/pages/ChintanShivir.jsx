@@ -1,7 +1,30 @@
 import React from 'react';
 // Assuming you have an icon library like 'react-icons' installed.
 // npm install react-icons
-import { FaInstagram, FaFacebookF, FaYoutube } from 'react-icons/fa';
+import Ajaychaturvedi from "../assets/Ajay Chaturvedi.jpg";
+import Lakshimidharbehera from "../assets/lakshmidhar behera.png";
+import Suryaprakash from "../assets/Surya prakash upadhyay.jpeg";
+import Somnath from "../assets/s-somanath.jpg";
+import Gautamdesiraju from "../assets/gautam-desiraju.jpg";
+import gantimurthy from "../assets/ganti murthy.jpeg";
+import raghunandan from "../assets/kn-raghunandan.jpg";
+import atulkothari from "../assets/atul-kothari.jpg";
+import smishra from "../assets/s-mishra.jpg";
+import deepaksinghal from "../assets/deepak-singhal.jpg";
+import kanagasabapathy from "../assets/kanaga-sabapathy.jpg";
+import sankrantsanu from "../assets/sankrant sanu.jpeg";
+import malakapadia from "../assets/mala-kapadia.jpg";
+import vishnunamboothiri from "../assets/vishnu-namboothiri.jpg";
+import shefalivaidya from "../assets/shefali vaidya.jpg";
+import eldhomb from "../assets/eldho-mb.jpg";
+import rishimanivannan from "../assets/rishi-manivannan.jpg";
+import chandrashekaraja from "../assets/chandrashekara-ja.jpg";
+import abhigyaanand from "../assets/abhigya-anand.jpg";
+import kvaisakhgurukkal from "../assets/k-vaisakh-gurukkal.jpg";
+import raghavakrishna from "../assets/raghava-krishna.jpg";
+import mylogo from "../assets/Mylogo.png"
+
+
 
 // --- Data for the component ---
 
@@ -10,46 +33,46 @@ const keyPeople = [
     name: "AJAY CHATURVEDI",
     title: "CHAIR, CONVENOR - KEF",
     description: "AUTHOR, STRATEGIST, EDUCATIONIST",
-    image: "/assets/ajay-chaturvedi.png",
+    image: Ajaychaturvedi,
   },
   {
     name: "PROF. LAKSHMIDHAR BEHERA",
     title: "DIRECTOR, IIT MANDI &",
     description: "BOARD OF ADVISOR - KEF",
-    image: "/assets/lakshmidhar-behera.png",
+    image: Lakshimidharbehera,
   },
   {
     name: "DR. SURYAPRAKASH UPADHYAY",
     title: "CHAIR SCHOOL OF HUMANAITIES",
     description: "AND SOCIAL SCIENCES",
-    image: "/assets/suryaprakash-upadhyay.png",
+    image: Suryaprakash,
   },
 ];
 
 const eminentSpeakers = [
-    { name: 'Dr. S. SOMANATH', title: 'FORMER CHAIRMAN', description: 'ISRO', image: '/assets/s-somanath.png' },
-    { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: '/assets/gautam-desiraju.png' },
-    { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: '/assets/ganti-murthy.png' },
-    { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: '/assets/kn-raghunandan.png' },
-    { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: '/assets/atul-kothari.png' },
-    { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: '/assets/s-mishra.png' },
-    { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: '/assets/deepak-singhal.png' },
-    { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: '/assets/kanaga-sabapathy.png' },
-    { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: '/assets/sankrant-sanu.png' },
+    { name: 'Dr. S. SOMANATH', title: 'FORMER CHAIRMAN', description: 'ISRO', image: Somnath },
+    { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: Gautamdesiraju },
+    { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
+    { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: raghunandan },
+    { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: atulkothari },
+    { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: smishra},
+    { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
+    { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
+    { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
 ];
 
 const eminentGuests = [
-    { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: '/assets/mala-kapadia.png' },
-    { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: '/assets/vishnu-namboothiri.png' },
-    { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: '/assets/shefali-vaidya.png' },
-    { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: '/assets/kavan-ganapathy.png' },
-    { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image: '/assets/eldho-mb.png' },
-    { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: '/assets/rishi-manivannan.png' },
-    { name: 'CHANDRASHEKARA J A', title: 'JYOTISHA VIDHWAN & SHIROMANI,', description: 'GURU IN PRASHNA SHASTRA', image: '/assets/chandrashekara-ja.png' },
-    { name: 'PARITOSH SHARMA', title: 'FOUNDER SHUNYA AI', description: '', image: '/assets/paritosh-sharma.png' },
-    { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: '/assets/abhigya-anand.png' },
-    { name: 'K VAISAKH GURUKKAL', title: 'LEADER SREE DURGA KALARI', description: '', image: '/assets/k-vaisakh-gurukkal.png' },
-    { name: 'RAGHAVA KRISHNA', title: 'FOUNDER & CEO, BRHAT LLC', description: '', image: '/assets/raghava-krishna.png' },
+    { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
+    { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: vishnunamboothiri },
+    { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
+    { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: kanagasabapathy },
+    { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image:eldhomb },
+    { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: rishimanivannan },
+    { name: 'CHANDRASHEKARA J A', title: 'JYOTISHA VIDHWAN & SHIROMANI,', description: 'GURU IN PRASHNA SHASTRA', image: chandrashekaraja },
+    { name: 'PARITOSH SHARMA', title: 'FOUNDER SHUNYA AI', description: '', image: "" },
+    { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
+    { name: 'K VAISAKH GURUKKAL', title: 'LEADER SREE DURGA KALARI', description: '', image: kvaisakhgurukkal },
+    { name: 'RAGHAVA KRISHNA', title: 'FOUNDER & CEO, BRHAT LLC', description: '', image: raghavakrishna },
 ];
 
 
@@ -94,20 +117,21 @@ const ChintanShivir = () => {
     { title: "Swadeshi Arthavyavastha", description: "The kullhad as a living metaphor—sustainable, locally made, biodegradable, rooted in culture yet globally relevant." },
   ];
 
+  // ...
   return (
-    <div className="bg-[#4a2511] min-h-screen text-white font-sans overflow-hidden" style={{ backgroundImage: 'url("/assets/background-pattern.png")', backgroundRepeat: 'repeat', backgroundSize: '400px' }}>
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    <div className="bg-[#4a2511] min-h-screen text-white font-sans overflow-hidden pt-28" style={{ backgroundImage: 'url("/assets/background-pattern.png")', backgroundRepeat: 'repeat', backgroundSize: '400px' }}>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+
 
             {/* Header Section */}
             <header className="flex justify-between items-center mb-8">
-                <img src="/assets/kef-logo.png" alt="KEF Logo" className="h-24 w-24 object-contain" />
+                <img src = "/Mylogo.png" alt="KEF Logo" className="h-24 w-24 object-contain" />
                 <div className="text-center">
                     <h1 className="text-5xl md:text-7xl font-serif font-extrabold text-[#f7d57e]">KEF 2025</h1>
                     <p className="text-2xl md:text-3xl font-serif text-white">Kullhad Economy Festival</p>
                     <p className="text-lg text-amber-100 mt-1">Experience, Learn, Celebrate</p>
                     <p className="text-xl font-semibold text-white mt-2">The Dharmic Way (2 - 5 October)</p>
                 </div>
-                <img src="/assets/iit-mandi-logo.png" alt="IIT Mandi Logo" className="h-24 w-24 object-contain" />
             </header>
 
             {/* Chintan Shivir Workshop Section */}
@@ -166,9 +190,7 @@ const ChintanShivir = () => {
             <footer className="text-center mt-20 py-10 border-t-2 border-[#f7d57e]/30">
                 <h3 className="text-4xl font-serif font-bold text-white mb-4">JOIN THE MOVEMENT</h3>
                 <div className="flex justify-center items-center space-x-6">
-                    <a href="#" className="text-white hover:text-[#f7d57e]"><FaInstagram size={28} /></a>
-                    <a href="#" className="text-white hover:text-[#f7d57e]"><FaYoutube size={28} /></a>
-                    <a href="#" className="text-white hover:text-[#f7d57e]"><FaFacebookF size={28} /></a>
+                    
                     <span className="text-2xl font-semibold text-white">@KULLHADECONOMY</span>
                 </div>
             </footer>

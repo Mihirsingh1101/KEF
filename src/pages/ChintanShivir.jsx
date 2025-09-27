@@ -133,17 +133,17 @@ const ChintanShivir = () => {
     <header className="text-center items-center mb-8">
         <div className="text-center">
             {/* Smaller base size, scales up on medium (md) screens */}
-            <h1 className="relative text-3xl md:text-4xl font-bold  bg-gradient-to-r from-orange-500 via-red-500 to-red-600 bg-clip-text text-transparent">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#f7d57e]">
                 KEF 2025
             </h1>
             {/* Scaled down subtitle */}
-            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-red mt-1">
+            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-white mt-1">
                 Kullhad Economy Festival
             </p>
             <p className="text-md sm:text-lg text-amber-100 mt-2">
                 Experience, Learn, Celebrate
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-red mt-3">
+            <p className="text-lg sm:text-xl font-semibold text-white mt-3">
                 The Dharmic Way (2 - 5 October)
             </p>
         </div>
@@ -156,7 +156,7 @@ const ChintanShivir = () => {
             Half-Day Workshop (By Invite Only)
         </h2>
         {/* Scaled down heading */}
-        <h1 className="relative text-3xl md:text-4xl font-bold  bg-gradient-to-r from-orange-500 via-red-500 to-red-600 bg-clip-text text-transparent">
+        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#f7d57e] my-3">
             CHINTAN SHIVIR
         </h1>
         <p className="text-lg sm:text-xl max-w-4xl mx-auto italic text-amber-100">

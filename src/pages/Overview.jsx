@@ -15,31 +15,6 @@ export default function Overview() {
 
       {/* Right Section */}
       <div className="flex-1 flex flex-col items-center justify-center bg-[#f9f5e9] p-8">
-        {/* Images */}
-        <div className="flex gap-6 mb-8 flex-wrap justify-center">
-          <div
-            className={`transform transition duration-700 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            <img
-              src={womanPotteryImage}
-              alt="Woman making clay pot"
-              className="w-48 h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition"
-            />
-          </div>
-          <div
-            className={`transform transition duration-700 delay-200 ${
-              isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-            }`}
-          >
-            <img
-              src={manPotteryImage}
-              alt="Man making pottery"
-              className="w-48 h-48 object-cover rounded-xl shadow-lg hover:scale-105 transition"
-            />
-          </div>
-        </div>
 
         {/* Mission */}
         <div className="max-w-xl text-center">

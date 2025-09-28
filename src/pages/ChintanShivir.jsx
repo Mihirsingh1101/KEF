@@ -1,6 +1,5 @@
+
 import React from 'react';
-// Assuming you have an icon library like 'react-icons' installed.
-// npm install react-icons
 import Ajaychaturvedi from "../assets/Ajay Chaturvedi.jpg";
 import Lakshimidharbehera from "../assets/lakshmidhar behera.png";
 import Suryaprakash from "../assets/Surya prakash upadhyay.jpeg";
@@ -22,10 +21,8 @@ import chandrashekaraja from "../assets/chandrashekara-ja.jpg";
 import abhigyaanand from "../assets/abhigya-anand.jpg";
 import kvaisakhgurukkal from "../assets/k-vaisakh-gurukkal.jpg";
 import raghavakrishna from "../assets/raghava-krishna.jpg";
-import mylogo from "../assets/Mylogo.png"
-import gradientBg from "../assets/gradientbg.jpg"
-
-
+import kavanganpathy from "../assets/kavan-ganapathy.jpg"
+import ParitoshSharma from "../assets/Paritosh Sharma.jpg"
 
 // --- Data for the component ---
 
@@ -49,33 +46,31 @@ const keyPeople = [
     image: Suryaprakash,
   },
 ];
-
 const eminentSpeakers = [
-    { name: 'Dr. S. SOMANATH', title: 'FORMER CHAIRMAN', description: 'ISRO', image: Somnath },
-    { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: Gautamdesiraju },
-    { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
-    { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: raghunandan },
-    { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: atulkothari },
-    { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: smishra},
-    { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
-    { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
-    { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
+  { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: atulkothari },
+  { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: raghunandan },
+  { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
+  { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
+  { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
+  { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: smishra},
+  { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
+  { name: 'Dr. S. SOMANATH', title: 'FORMER CHAIRMAN', description: 'ISRO', image: Somnath },
+  { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: Gautamdesiraju },
 ];
 
 const eminentGuests = [
-    { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
-    { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: vishnunamboothiri },
-    { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
-    { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: kanagasabapathy },
-    { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image:eldhomb },
-    { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: rishimanivannan },
-    { name: 'CHANDRASHEKARA J A', title: 'JYOTISHA VIDHWAN & SHIROMANI,', description: 'GURU IN PRASHNA SHASTRA', image: chandrashekaraja },
-    { name: 'PARITOSH SHARMA', title: 'FOUNDER SHUNYA AI', description: '', image: "" },
-    { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
-    { name: 'K VAISAKH GURUKKAL', title: 'LEADER SREE DURGA KALARI', description: '', image: kvaisakhgurukkal },
-    { name: 'RAGHAVA KRISHNA', title: 'FOUNDER & CEO, BRHAT LLC', description: '', image: raghavakrishna },
+  { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
+  { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: vishnunamboothiri },
+  { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
+  { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: kavanganpathy },
+  { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image: eldhomb },
+  { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: rishimanivannan },
+  { name: 'CHANDRASHEKARA J A', title: 'JYOTISHA VIDHWAN & SHIROMANI,', description: 'GURU IN PRASHNA SHASTRA', image: chandrashekaraja },
+  { name: 'PARITOSH SHARMA', title: 'FOUNDER SHUNYA AI', description: '', image: ParitoshSharma },
+  { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
+  { name: 'K VAISAKH GURUKKAL', title: 'LEADER SREE DURGA KALARI', description: '', image: kvaisakhgurukkal },
+  { name: 'RAGHAVA KRISHNA', title: 'FOUNDER & CEO, BRHAT LLC', description: '', image: raghavakrishna },
 ];
-
 
 // --- Reusable Components ---
 
@@ -90,20 +85,20 @@ const PersonProfile = ({ name, title, description, image }) => (
     <OrnateBorder>
       <img src={image} alt={name} className="w-40 h-40 rounded-full object-cover border-4 border-[#4a2511]" />
     </OrnateBorder>
-    <h3 className="mt-4 font-bold text-lg text-[#f7d57e]">{name}</h3>
-    <p className="text-sm text-white uppercase">{title}</p>
-    <p className="text-sm text-white uppercase">{description}</p>
+    <h3 className="mt-4 font-bold text-lg text-[#4a2511]">{name}</h3>
+    <p className="text-sm text-gray-800 uppercase">{title}</p>
+    <p className="text-sm text-gray-700 uppercase">{description}</p>
   </div>
 );
 
 const SectionTitle = ({ children }) => (
-  <h2 className="text-4xl font-serif text-center font-bold text-[#f7d57e] tracking-wider uppercase my-12">
+  <h2 className="text-4xl font-serif text-center font-bold text-[#4a2511] tracking-wider uppercase my-12">
     {children}
   </h2>
 );
 
 const DecorativeLine = () => (
-    <div className="w-full h-px bg-gradient-to-r from-transparent via-[#f7d57e] to-transparent my-16 opacity-50"></div>
+  <div className="w-full h-px bg-gradient-to-r from-transparent via-[#4a2511] to-transparent my-16 opacity-50"></div>
 );
 
 // --- Main Page Component ---
@@ -118,110 +113,100 @@ const ChintanShivir = () => {
     { title: "Swadeshi Arthavyavastha", description: "The kullhad as a living metaphor—sustainable, locally made, biodegradable, rooted in culture yet globally relevant." },
   ];
 
-  // ...
   return (
     <div
-      style={{ backgroundImage: `url(${gradientBg})` }}
-      className="bg-cover bg-center bg-no-repeat min-h-screen text-white font-sans overflow-hidden pt-28"
+      style={{ backgroundColor: "#fffbea" }}
+      className="min-h-screen text-gray-900 font-sans overflow-hidden pt-28"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
 
-
-            {/* Header Section */}
-            <div className="px-4">
-
-    <header className="text-center items-center mb-8">
-        <div className="text-center">
-            {/* Smaller base size, scales up on medium (md) screens */}
-            <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#f7d57e]">
-                KEF 2025
+        {/* Header Section */}
+        <header className="text-center items-center mb-8">
+          <div className="text-center">
+            <h1 className="text-5xl sm:text-6xl md:text-7xl font-serif font-extrabold text-[#4a2511]">
+              KEF 2025
             </h1>
-            {/* Scaled down subtitle */}
-            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-white mt-1">
-                Kullhad Economy Festival
+            <p className="text-xl sm:text-2xl md:text-3xl font-serif text-gray-900 mt-1">
+              Kullhad Economy Festival
             </p>
-            <p className="text-md sm:text-lg text-amber-100 mt-2">
-                Experience, Learn, Celebrate
+            <p className="text-md sm:text-lg text-gray-700 mt-2">
+              Experience, Learn, Celebrate
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-white mt-3">
-                The Dharmic Way (2 - 5 October)
+            <p className="text-lg sm:text-xl font-semibold text-gray-900 mt-3">
+              The Dharmic Way (2 - 5 October)
             </p>
-        </div>
-    </header>
+          </div>
+        </header>
 
-    {/* Chintan Shivir Workshop Section */}
-    {/* Reduced vertical margin on mobile (my-12), larger on medium screens (md:my-16) */}
-    <section className="text-center my-12 md:my-16">
-        <h2 className="text-lg sm:text-xl text-amber-200 tracking-widest uppercase">
+        {/* Chintan Shivir Workshop Section */}
+        <section className="text-center my-12 md:my-16">
+          <h2 className="text-lg sm:text-xl text-gray-700 tracking-widest uppercase">
             Half-Day Workshop (By Invite Only)
-        </h2>
-        {/* Scaled down heading */}
-        <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#f7d57e] my-3">
+          </h2>
+          <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#4a2511] my-3">
             CHINTAN SHIVIR
-        </h1>
-        <p className="text-lg sm:text-xl max-w-4xl mx-auto italic text-amber-100">
+          </h1>
+          <p className="text-lg sm:text-xl max-w-4xl mx-auto italic text-gray-800">
             Theme: "Viksit Bharat and Rashtra Dharma: Blending Knowledge, Science, and Dharmic Design for a Sustainable Future"
-        </p>
-        <p className="text-lg sm:text-xl font-bold mt-4 text-white">
+          </p>
+          <p className="text-lg sm:text-xl font-bold mt-4 text-gray-900">
             5<sup>th</sup> October Morning, At IIT Mandi
-        </p>
-    </section>
+          </p>
+        </section>
 
-</div>
+        {/* Key Themes Section */}
+        <section className="my-16 max-w-5xl mx-auto">
+          <h3 className="text-3xl font-serif text-center font-bold text-[#4a2511] mb-8">Key Themes</h3>
+          <div className="space-y-6">
+            {keyThemes.map((theme, index) => (
+              <div key={index} className="flex items-start">
+                <span className="text-2xl font-bold text-[#4a2511] mr-4">{index + 1}.</span>
+                <p className="text-lg text-gray-900">
+                  <span className="font-bold text-[#a57c3a]">{theme.title}</span> &rarr; {theme.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
 
-            {/* Key Themes Section */}
-            <section className="my-16 max-w-5xl mx-auto">
-                <h3 className="text-3xl font-serif text-center font-bold text-[#f7d57e] mb-8">Key Themes</h3>
-                <div className="space-y-6">
-                    {keyThemes.map((theme, index) => (
-                        <div key={index} className="flex items-start">
-                            <span className="text-2xl font-bold text-[#f7d57e] mr-4">{index + 1}.</span>
-                            <p className="text-lg">
-                                <span className="font-bold text-amber-200">{theme.title}</span> &rarr; {theme.description}
-                            </p>
-                        </div>
-                    ))}
-                </div>
-            </section>
-            
-            {/* Key People Section */}
-            <section className="my-16">
-                 <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8 max-w-6xl mx-auto">
-                    {keyPeople.map(person => <PersonProfile key={person.name} {...person} />)}
-                </div>
-            </section>
-            
-            <DecorativeLine />
+        {/* Key People Section */}
+        <section className="my-16">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8 max-w-6xl mx-auto">
+            {keyPeople.map(person => <PersonProfile key={person.name} {...person} />)}
+          </div>
+        </section>
 
-            {/* Eminent Speakers Section */}
-            <section className="my-16">
-                <SectionTitle>Eminent Speakers</SectionTitle>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 max-w-6xl mx-auto">
-                    {eminentSpeakers.map(person => <PersonProfile key={person.name} {...person} />)}
-                </div>
-            </section>
+        <DecorativeLine />
 
-            <DecorativeLine />
+        {/* Eminent Speakers Section */}
+        <section className="my-16">
+          <SectionTitle>Eminent Speakers</SectionTitle>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 max-w-6xl mx-auto">
+            {eminentSpeakers.map(person => <PersonProfile key={person.name} {...person} />)}
+          </div>
+        </section>
 
-            {/* Eminent Guests Section */}
-            <section className="my-16">
-                <SectionTitle>Eminent Guests</SectionTitle>
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 max-w-7xl mx-auto">
-                    {eminentGuests.map(person => <PersonProfile key={person.name} {...person} />)}
-                </div>
-            </section>
+        <DecorativeLine />
 
-            {/* Footer Section */}
-            <footer className="text-center mt-20 py-10 border-t-2 border-[#f7d57e]/30">
-                <h3 className="text-4xl font-serif font-bold text-white mb-4">JOIN THE MOVEMENT</h3>
-                <div className="flex justify-center items-center space-x-6">
-                    
-                    <span className="text-2xl font-semibold text-white">@KULLHADECONOMY</span>
-                </div>
-            </footer>
-        </div>
+        {/* Eminent Guests Section */}
+        <section className="my-16">
+          <SectionTitle>Eminent Guests</SectionTitle>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-16 gap-x-8 max-w-7xl mx-auto">
+            {eminentGuests.map(person => <PersonProfile key={person.name} {...person} />)}
+          </div>
+        </section>
+
+        {/* Footer Section */}
+        <footer className="text-center mt-20 py-10 border-t-2 border-[#a57c3a]/30">
+          <h3 className="text-4xl font-serif font-bold text-[#4a2511] mb-4">JOIN THE MOVEMENT</h3>
+          <div className="flex justify-center items-center space-x-6">
+            <span className="text-2xl font-semibold text-gray-900">@KULLHADECONOMY</span>
+          </div>
+        </footer>
+      </div>
     </div>
   );
 };
 
 export default ChintanShivir;
+

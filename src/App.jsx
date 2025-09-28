@@ -23,6 +23,8 @@ import KeyFeatures from './pages/KeyFeatures';
 import Artist from './pages/Artist'
 import ChiefGuest from './pages/chiefguest';
 import ChintanShivir from './pages/ChintanShivir';
+import Docschedule from './pages/Docschedule';
+import Shorts from './pages/Shorts';
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -73,6 +75,7 @@ function AnimatedRoutes() {
                     <section id="overview"><Overview /></section>
                     <section id="objectives"><Objectives /></section>
                     <section id="key-features"><KeyFeatures /></section>
+                    <section id="shorts"><Shorts /></section>
                   </>
                 }
               />
@@ -81,6 +84,7 @@ function AnimatedRoutes() {
               <Route path="/about" element={<Aboutpage />} />
               <Route path="/schedule" element={
                 <> <SchedulePage />
+                  <Docschedule />
                   <ChiefGuest />
                   <Artist />
                 </>

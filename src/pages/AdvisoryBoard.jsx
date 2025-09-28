@@ -42,11 +42,6 @@ const advisoryBoardData = [
         post: 'Business Leader, Business Strategy',
     },
     {
-        photoUrl: anilSharmaPhoto,
-        name: 'Mr. Anil Sharma',
-        post: 'Entrepreneur, Entrepreneurship',
-    },
-    {
         photoUrl: sankrantSanuPhoto,
         name: 'Mr. Sankrant Sanu',
         post: 'Entrepreneur (GarudaLife), Entrepreneurship',

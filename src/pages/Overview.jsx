@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from "react";
-import womanPotteryImage from "../assets/Womanclaypot.png";
-import manPotteryImage from "../assets/Manpotmaking.png";
+
 
 export default function Overview() {
   const [isVisible, setIsVisible] = useState(false);

@@ -25,6 +25,7 @@ import ChiefGuest from './pages/chiefguest';
 import ChintanShivir from './pages/ChintanShivir';
 import Docschedule from './pages/Docschedule';
 import Shorts from './pages/Shorts';
+import Directorvid from './pages/directorvid';
 
 // Firebase Auth pages
 import SignIn from './pages/SignIn';
@@ -75,6 +76,7 @@ function AnimatedRoutes() {
                     <section id="overview"><Overview /></section>
                     <section id="objectives"><Objectives /></section>
                     <section id="key-features"><KeyFeatures /></section>
+                    <section id="Director Video"><Directorvid /></section>
                     <section id="shorts"><Shorts /></section>
                   </>
                 }

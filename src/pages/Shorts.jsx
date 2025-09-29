@@ -3,18 +3,18 @@ import React from "react";
 const Shorts = () => {
   // Add your YouTube Shorts video IDs here (from the URL after /shorts/)
   const shorts = [
+    "GN37GSD2nL0",
+    "cmVUSx8oHik",
     "pjLWdRBARbI", // replace with your first short ID
     "b3dIWSl4AGo",
-    "cmVUSx8oHik",
     "AM33y7B1hA0",
-    "GN37GSD2nL0",
     "ik_WVndijjM",
   ];
 
   return (
     <div
       style={{ backgroundColor: "#fffbea" }}
-      className="min-h-screen text-gray-900 font-sans overflow-hidden pt-28"
+      className="min-h-screen text-gray-900 font-sans overflow-hidden"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Header */}
@@ -51,7 +51,12 @@ const Shorts = () => {
           ))}
         </div>
       </div>
+      <div
+      style={{ backgroundColor: "#fffbea" }}
+      className="p"
+    ></div>
     </div>
+    
   );
 };
 

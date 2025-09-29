@@ -21,8 +21,9 @@ import chandrashekaraja from "../assets/chandrashekara-ja.jpg";
 import abhigyaanand from "../assets/abhigya-anand.jpg";
 import kvaisakhgurukkal from "../assets/k-vaisakh-gurukkal.jpg";
 import raghavakrishna from "../assets/raghava-krishna.jpg";
-import kavanganpathy from "../assets/kavan-ganapathy.jpg"
-import ParitoshSharma from "../assets/Paritosh Sharma.jpg"
+import kavanganpathy from "../assets/kavan-ganapathy.jpg";
+import ParitoshSharma from "../assets/Paritosh Sharma.jpg";
+import debiprasadmishra from "../assets/debi-prasad-mishra.jpg"
 
 // --- Data for the component ---
 
@@ -50,6 +51,8 @@ const eminentSpeakers = [
   { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: atulkothari },
   { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: raghunandan },
   { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
+  { name: 'DEBI PRASAD MISHRA', title: 'PROFESSOR &', description: 'DEPARMENT OF AERSOSPACE ENGINEERING', image: debiprasadmishra },
+
   { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
   { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
   { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: smishra},

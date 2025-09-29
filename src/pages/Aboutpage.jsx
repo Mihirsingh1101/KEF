@@ -55,6 +55,11 @@ const studentCouncilData = [
     post: 'PhD Research Scholar, IIT Mandi Chief Operations',
   },
   {
+    photoUrl: Devansh,
+    name: 'Devansh Garg',
+    post: 'PhD Research Scholar, IIT Mandi Chief Operations',
+  },
+  {
     photoUrl: Dharma, // You can also use direct web links
     name: 'Dharma',
     post: 'PhD Scholar, IIT Mandi Head-Logistics',
@@ -104,11 +109,7 @@ const studentCouncilData = [
     name: 'Dhruv Makhija',
     post: 'I-MBA Undergrad, IIT Mandi Head-Webdev Team',
   },
-    {
-    photoUrl: Devansh,
-    name: 'Devansh Garg',
-    post: 'B.Tech Undergrad, IIT Mandi Head-Operations',
-  },
+    
     {
     photoUrl: Daksh,
     name: 'Daksh Bidhuri',

@@ -5,7 +5,7 @@ const DocSchedule = () => {
   return (
     <div
       style={{ backgroundColor: "#fffbea" }}
-      className="min-h-screen text-gray-900 font-sans overflow-hidden pt-28"
+      className="text-gray-900 font-sans overflow-hidden pt-28 pb-20"
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
         {/* Header */}

@@ -1,5 +1,4 @@
 import React from "react";
-import guest1 from "../assets/kangana ranaut.jpeg"
 import guest2 from "../assets/Anurag.jpg"
 
 export default function ChiefGuests() {
@@ -24,7 +23,7 @@ export default function ChiefGuests() {
         <div className="h-1 w-32 mx-auto mb-12 bg-gradient-to-r from-[#e63946] via-[#f6aa1c] to-[#e63946] rounded-full"></div>
 
         {/* Guests Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        
           {guests.map((guest, index) => (
             <div
               key={index}
@@ -52,6 +51,6 @@ export default function ChiefGuests() {
           ))}
         </div>
       </div>
-    </div>
+    
   );
 }

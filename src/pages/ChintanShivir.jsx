@@ -26,51 +26,39 @@ import ParitoshSharma from "../assets/Paritosh Sharma.jpg";
 import debiprasadmishra from "../assets/debi-prasad-mishra.jpg"
 
 // --- Data for the component ---
-
-const keyPeople = [
-  {
-    name: "AJAY CHATURVEDI",
-    title: "CHAIR, CONVENOR - KEF",
-    description: "AUTHOR, STRATEGIST, EDUCATIONIST",
-    image: Ajaychaturvedi,
-  },
-  {
+const eminentSpeakers = [
+  { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
+    {
     name: "PROF. LAKSHMIDHAR BEHERA",
     title: "DIRECTOR, IIT MANDI &",
     description: "BOARD OF ADVISOR - KEF",
     image: Lakshimidharbehera,
   },
-  {
-    name: "DR. SURYAPRAKASH UPADHYAY",
-    title: "CHAIR SCHOOL OF HUMANAITIES",
-    description: "AND SOCIAL SCIENCES",
-    image: Suryaprakash,
+    {
+    name: "PROF. AJAY CHATURVEDI",
+    title: "CHAIR, CONVENOR - KEF",
+    description: "AUTHOR, STRATEGIST, EDUCATIONIST",
+    image: Ajaychaturvedi,
   },
-];
-const eminentSpeakers = [
   { name: 'ATUL KOTHARI', title: 'NATIONAL SECRETARY, SHIKSHA', description: 'SANSKRITI UTTHAN NYAS', image: atulkothari },
   { name: 'K.N. RAGHUNANDAN', title: 'THOUGHT LRADER IN EDUCATION &', description: 'INDIC KNOWLEDGE SYSTEM', image: raghunandan },
   { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
   { name: 'DEBI PRASAD MISHRA', title: 'PROFESSOR &', description: 'DEPARMENT OF AERSOSPACE ENGINEERING', image: debiprasadmishra },
-
-  { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
+  { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
+   { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
   { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
-  { name: 'PROF. S. MISHRA', title: 'SANSKRIT SCHOLAR', description: 'SANSKRIT SCHOLAR', image: smishra},
   { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
-  { name: 'Dr. S. SOMANATH', title: 'FORMER CHAIRMAN', description: 'ISRO', image: Somnath },
+  { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
   { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: Gautamdesiraju },
 ];
 
 const eminentGuests = [
-  { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
   { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: vishnunamboothiri },
-  { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
   { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: kavanganpathy },
   { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image: eldhomb },
   { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: rishimanivannan },
   { name: 'CHANDRASHEKARA J A', title: 'JYOTISHA VIDHWAN & SHIROMANI,', description: 'GURU IN PRASHNA SHASTRA', image: chandrashekaraja },
   { name: 'PARITOSH SHARMA', title: 'FOUNDER SHUNYA AI', description: '', image: ParitoshSharma },
-  { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
   { name: 'K VAISAKH GURUKKAL', title: 'LEADER SREE DURGA KALARI', description: '', image: kvaisakhgurukkal },
   { name: 'RAGHAVA KRISHNA', title: 'FOUNDER & CEO, BRHAT LLC', description: '', image: raghavakrishna },
 ];
@@ -171,15 +159,6 @@ const ChintanShivir = () => {
             ))}
           </div>
         </section>
-
-        {/* Key People Section */}
-        <section className="my-16">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-8 max-w-6xl mx-auto">
-            {keyPeople.map(person => <PersonProfile key={person.name} {...person} />)}
-          </div>
-        </section>
-
-        <DecorativeLine />
 
         {/* Eminent Speakers Section */}
         <section className="my-16">

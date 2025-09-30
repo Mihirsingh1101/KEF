@@ -1,14 +1,11 @@
 import React, { useState, useEffect, useRef } from 'react';
 import './KEFAboutUs.css'; // The CSS file that will contain all styles
-import kefLogo from '../assets/Mylogo.png';
 import adityapandey from '../assets/aditya pandey.jpeg';
 import virinchi from '../assets/virinchi.jpg';
 import priyankari from '../assets/priyankari.jpg';
 import Dharma from '../assets/Dharma.jpg';
-import sheetalBhartiPhoto from '../assets/Sheetal Bharti.jpg';
 import nakulKumarPhoto from '../assets/nakul kumar.jpg';
 import pranshuPhoto from '../assets/pranshu.jpg';
-import piyushRoyPhoto from '../assets/piyush roy.jpg';
 import nitinKumarPhoto from '../assets/nitin kumar.jpg';
 import vaibhavDeepPhoto from '../assets/vabhav deep jaiswal.jpg';
 
@@ -57,17 +54,18 @@ const studentCouncilData = [
   {
     photoUrl: Devansh,
     name: 'Devansh Garg',
-    post: 'PhD Research Scholar, IIT Mandi Chief Operations',
+    post: 'Btech-undergrad, IIT Mandi Chief Operations',
   },
+        {
+    photoUrl: Satyansh,
+    name: 'Satyansh',
+    post: 'B.Tech Undergrad, IIT Mandi Joint Head',
+  },
+
   {
     photoUrl: Dharma, // You can also use direct web links
     name: 'Dharma',
     post: 'PhD Scholar, IIT Mandi Head-Logistics',
-  },
-  {
-    photoUrl: sheetalBhartiPhoto,
-    name: 'Sheetal Bharti',
-    post: 'PhD Scholar, IIT Mandi Head-Hospitality',
   },
   {
     photoUrl: nitinKumarPhoto,
@@ -83,11 +81,6 @@ const studentCouncilData = [
     photoUrl: nakulKumarPhoto,
     name: 'Nakul Kumar',
     post: 'B.Tech Undergrad, IIT Mandi Head-Social Media',
-  },
-  {
-    photoUrl: piyushRoyPhoto,
-    name: 'Piyush Roy',
-    post: 'B.Tech Undergrad, IIT Mandi Strategy Advisor',
   },
   {
     photoUrl: pranshuPhoto,
@@ -125,12 +118,6 @@ const studentCouncilData = [
     name: 'Devprakash',
     post: 'B.Tech Undergrad, IIT Mandi Head-Hospitality',
   },
-      {
-    photoUrl: Satyansh,
-    name: 'Satyansh',
-    post: 'B.Tech Undergrad, IIT Mandi Joint Head',
-  },
-
 ];
 
 

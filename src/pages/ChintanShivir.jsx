@@ -159,12 +159,7 @@ const ChintanShivir = () => {
         </section>
 
         {/* Footer Section */}
-        <footer className="text-center mt-20 py-10 border-t-2 border-[#a57c3a]/30">
-          <h3 className="text-4xl font-serif font-bold text-[#4a2511] mb-4">JOIN THE MOVEMENT</h3>
-          <div className="flex justify-center items-center space-x-6">
-            <span className="text-2xl font-semibold text-gray-900">@KULLHADECONOMY</span>
-          </div>
-        </footer>
+        
       </div>
     </div>
   );

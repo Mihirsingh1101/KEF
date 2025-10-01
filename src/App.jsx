@@ -23,6 +23,7 @@ import KeyFeatures from './pages/KeyFeatures';
 import Artist from './pages/Artist'
 import ChiefGuest from './pages/chiefguest';
 import ChintanShivir from './pages/ChintanShivir';
+import ScheduleChintanShivir from './pages/Schedulechintan';
 import Docschedule from './pages/Docschedule';
 import Shorts from './pages/Shorts';
 import Directorvid from './pages/directorvid';
@@ -93,7 +94,10 @@ function AnimatedRoutes() {
               } />
               <Route path="/content" element={<Content />} />
               <Route path="/advisory" element={<AdvisoryBoard />} />
-              <Route path="/ChintanShivir" element={<ChintanShivir />} />
+              <Route path="/ChintanShivir" element={
+                <><ChintanShivir />
+                  <ScheduleChintanShivir/>
+                </>} />
 
               {/* Auth pages */}
               <Route path="/signin" element={<SignIn />} />

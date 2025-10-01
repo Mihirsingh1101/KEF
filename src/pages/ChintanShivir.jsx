@@ -95,14 +95,7 @@ const DecorativeLine = () => (
 // --- Main Page Component ---
 
 const ChintanShivir = () => {
-  const keyThemes = [
-    { title: "Rashtra Dharma aur Sanskritik Chetna", description: "Dharmic economics rooted in rta; prosperity through festivals, traditions, and sustainable living by design." },
-    { title: "Shakha, Sangathan, Sanskara aur Anushasan", description: "Student-led KEF embodies discipline, cooperation, and production-driven communities over market manipulation." },
-    { title: "Rashtriya Ekta aur Samajik Samrasta", description: "Expansion of wealth via Aṣṭa-Lakṣmī; connecting farmers, technologists, entrepreneurs, and spiritual leaders." },
-    { title: "Ekatma Manavavaad (Integral Humanism)", description: "Economy as organic flow, emphasizing dignity of production and circulation of wealth over charity or dependency." },
-    { title: "Rashtriya Suraksha aur Svayattata", description: "Economic sovereignty through production-led growth and reduced global dependency (svavalamban as national security)." },
-    { title: "Swadeshi Arthavyavastha", description: "The kullhad as a living metaphor—sustainable, locally made, biodegradable, rooted in culture yet globally relevant." },
-  ];
+  
 
   return (
     <div
@@ -145,20 +138,7 @@ const ChintanShivir = () => {
           </p>
         </section>
 
-        {/* Key Themes Section */}
-        <section className="my-16 max-w-5xl mx-auto">
-          <h3 className="text-3xl font-serif text-center font-bold text-[#4a2511] mb-8">Key Themes</h3>
-          <div className="space-y-6">
-            {keyThemes.map((theme, index) => (
-              <div key={index} className="flex items-start">
-                <span className="text-2xl font-bold text-[#4a2511] mr-4">{index + 1}.</span>
-                <p className="text-lg text-gray-900">
-                  <span className="font-bold text-[#a57c3a]">{theme.title}</span> &rarr; {theme.description}
-                </p>
-              </div>
-            ))}
-          </div>
-        </section>
+        
 
         {/* Eminent Speakers Section */}
         <section className="my-16">

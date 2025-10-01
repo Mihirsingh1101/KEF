@@ -467,7 +467,7 @@ const styles = {
   },
   heroSubtitle: {
     fontSize: '1.2rem',
-    color: '#FFF3E0',
+    color: '#fc7d29ff',
     marginTop: '1rem',
   },
   ctaButton: {

@@ -5,11 +5,7 @@ import Ajay from '../assets/Anurag_Thakur.jpg'
 import Mohit from '../assets/Mohit Chauhan.webp'
 import vivek from '../assets/Vivek Agnihotri.webp'
 const artists = [
-  {
-    name: 'Ajay Thakur',
-    role: 'TAMAK - HERITAGE OF INDIA',
-    imageUrl: Ajay, // Placeholder image
-  },
+  
   {
     name: 'Mohit Chauhan',
     role: 'Bollywood Playback Singer',

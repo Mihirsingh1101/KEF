@@ -29,12 +29,7 @@ import Daksh from '../assets/Daksh.jpg'
 import hansraj from '../assets/Hansraj.jpg'
 import Devprakash from '../assets/Devprakash.jpg'
 import Satyansh from '../assets/satyansh.jpg'
-// ========================================================================
-// CODE TO APPEND: Team Data and Reusable Carousel Component
-// ========================================================================
 
-// --- Placeholder Data for the Teams ---
-// In a real application, you would fetch this data from an API.
 const studentCouncilData = [
   {
     photoUrl: adityapandey, // Use the imported image variable

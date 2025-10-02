@@ -17,12 +17,12 @@ const SchedulePage = () => {
 
       <main>
         <InteractiveTimeline activeDay={activeDay} setActiveDay={setActiveDay} />
-        <section className="py-16 px-4">
+        <section className="py-16 px-6">
           {Object.keys(ScheduleData).map(dayKey => {
             const isActive = parseInt(dayKey) === activeDay;
             return (
               <div key={dayKey} className={`grid transition-all duration-700 ease-in-out`} style={{ gridTemplateRows: isActive ? '1fr' : '0fr' }}>
-                <div className="overflow-hidden">
+                <div className="overflow-hidden text-left">
                   <DaySchedule dayData={ScheduleData[dayKey]} isVisible={isActive} />
                 </div>
               </div>

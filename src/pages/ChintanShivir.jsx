@@ -23,7 +23,8 @@ import kvaisakhgurukkal from "../assets/k-vaisakh-gurukkal.jpg";
 import raghavakrishna from "../assets/raghava-krishna.jpg";
 import kavanganpathy from "../assets/kavan-ganapathy.jpg";
 import ParitoshSharma from "../assets/Paritosh Sharma.jpg";
-import debiprasadmishra from "../assets/debi-prasad-mishra.jpg"
+import debiprasadmishra from "../assets/debi-prasad-mishra.jpg";
+import santhans from "../assets/sathans.jpg";
 
 // --- Data for the component ---
 const eminentSpeakers = [
@@ -45,7 +46,8 @@ const eminentSpeakers = [
   { name: 'KANAGA SABAPATHY', title: 'MOLECULAR ONCOLOGY &', description: 'CANCER GENETICS', image: kanagasabapathy },
   { name: 'DEBI PRASAD MISHRA', title: 'PROFESSOR &', description: 'DEPARMENT OF AERSOSPACE ENGINEERING', image: debiprasadmishra },
   { name: 'DR. MALA KAPADIA', title: 'DIRECTOR ANAADI CENTRE FOR', description: 'INDIGENOUS KNOWLEDGE SYSTEMS', image: malakapadia },
-   { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
+  { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
+  { name: 'Prof. Sathans', title: '', description: '', image: santhans },
   { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
   { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
   { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },

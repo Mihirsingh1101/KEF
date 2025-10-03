@@ -55,7 +55,7 @@ const eminentSpeakers = [
 ];
 
 const eminentGuests = [
-  { name: 'SHRI VISHNU NAMBOOTHIRI', title: 'WRITER, POET, ACADEMIC,', description: 'PRIEST', image: vishnunamboothiri },
+  { name: 'Brahmasree Vishnu Narayanan Namboothiri ', title: 'Acharya In Parashurama Thanthra Sasthra & Kerala Manthrika', description: 'PRIEST', image: vishnunamboothiri },
   { name: 'KAVAN GANAPATHY K P', title: 'CONSCIOUSNESS TECHNOLOGIES', description: 'RESEARCHER', image: kavanganpathy },
   { name: 'Eldho M B', title: 'GURU OF KALARI MARTIAL ARTS,', description: 'KALARI CHIKITSA HEALING & KALARI BASED YOGA-TANTRA', image: eldhomb },
   { name: 'RISHI MANIVANNAN', title: 'AYURVEDA, VARMA & SIDDHA', description: 'PRACTITIONER, MEDICAL OFFICER & RESEARCHER OF YOGA & TANTRA', image: rishimanivannan },

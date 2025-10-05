@@ -6,11 +6,6 @@ import Mohit from '../assets/Mohit Chauhan.webp'
 import vivek from '../assets/Vivek Agnihotri.webp'
 const artists = [
   
-  {
-    name: 'Mohit Chauhan',
-    role: 'Bollywood Playback Singer',
-    imageUrl : Mohit
-  },
     {
     name: 'Vivek Agnihotri',
     role: 'Indian Director',

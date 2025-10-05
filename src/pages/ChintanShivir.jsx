@@ -2,13 +2,10 @@
 import React from 'react';
 import Ajaychaturvedi from "../assets/Ajay Chaturvedi.jpg";
 import Lakshimidharbehera from "../assets/lakshmidhar behera.png";
-import Suryaprakash from "../assets/Surya prakash upadhyay.jpeg";
-import Somnath from "../assets/s-somanath.jpg";
 import Gautamdesiraju from "../assets/gautam-desiraju.jpg";
 import gantimurthy from "../assets/ganti murthy.jpeg";
 import raghunandan from "../assets/kn-raghunandan.jpg";
 import atulkothari from "../assets/atul-kothari.jpg";
-import smishra from "../assets/s-mishra.jpg";
 import deepaksinghal from "../assets/deepak-singhal.jpg";
 import kanagasabapathy from "../assets/kanaga-sabapathy.jpg";
 import sankrantsanu from "../assets/sankrant sanu.jpeg";
@@ -25,17 +22,20 @@ import kavanganpathy from "../assets/kavan-ganapathy.jpg";
 import ParitoshSharma from "../assets/Paritosh Sharma.jpg";
 import debiprasadmishra from "../assets/debi-prasad-mishra.jpg";
 import santhans from "../assets/sathans.jpg";
+import Ipye from "../assets/Iype Cherian .jpg"
+import arnav from "../assets/arnav bhavsar.jpeg"
+import venkatesh from "../assets/Venkatesh.jpg"
 
 // --- Data for the component ---
 const eminentSpeakers = [
   { name: 'PROF. GANTI MURTHY', title: 'SUSTAINABILITY &', description: 'VEDIC SCIENCE EXPERT', image: gantimurthy },
-    {
+  {
     name: "PROF. LAKSHMIDHAR BEHERA",
     title: "DIRECTOR, IIT MANDI &",
     description: "BOARD OF ADVISOR - KEF",
     image: Lakshimidharbehera,
   },
-    {
+  {
     name: "PROF. AJAY CHATURVEDI",
     title: "CHAIR, CONVENOR - KEF",
     description: "AUTHOR, STRATEGIST, EDUCATIONIST",
@@ -49,6 +49,9 @@ const eminentSpeakers = [
   { name: 'DR. SHEFALI VAIDYA', title: 'EMINENT RESEARCHER', description: '', image: shefalivaidya },
   { name: 'Prof. Sathans', title: '', description: '', image: santhans },
   { name: 'SANKRANT SANU', title: 'ENTREPRENEUR, AUTHOR &', description: 'RESEARCHER', image: sankrantsanu },
+  { name: 'Dr. Iype Cherian ', title: 'pioneer in modern neurosurgery', description: 'Doctor', image: Ipye },
+  { name: 'Dr. Venkatesh Chembrolu ', title: '', description: '', image: venkatesh },
+  { name: 'Dr. Arnav Bhavsar ', title: '', description: '', image: arnav },
   { name: 'DEEPAK SINGHAL', title: 'FORMER CHIEF SECRETARY', description: 'UTTAR PRADESH', image: deepaksinghal },
   { name: 'ABHIGYA ANAND', title: 'PRAAJNA JYOTISHA', description: '', image: abhigyaanand },
   { name: 'PROF. GAUTAM R. DESIRAJU', title: 'PADMA SHRI AWARDEE; GLOBAL', description: 'AUTHORITY ON CRYSTAL ENGINEERING', image: Gautamdesiraju },
@@ -97,7 +100,7 @@ const DecorativeLine = () => (
 // --- Main Page Component ---
 
 const ChintanShivir = () => {
-  
+
 
   return (
     <div
@@ -118,29 +121,20 @@ const ChintanShivir = () => {
             <p className="text-md sm:text-lg text-gray-700 mt-2">
               Experience, Learn, Celebrate
             </p>
-            <p className="text-lg sm:text-xl font-semibold text-gray-900 mt-3">
-              The Dharmic Way (2 - 5 October)
-            </p>
           </div>
         </header>
 
         {/* Chintan Shivir Workshop Section */}
         <section className="text-center my-12 md:my-16">
-          <h2 className="text-lg sm:text-xl text-gray-700 tracking-widest uppercase">
-            Half-Day Workshop (By Invite Only)
-          </h2>
           <h1 className="text-4xl sm:text-5xl font-serif font-bold text-[#4a2511] my-3">
             CHINTAN SHIVIR
           </h1>
           <p className="text-lg sm:text-xl max-w-4xl mx-auto italic text-gray-800">
             Theme: "Viksit Bharat and Rashtra Dharma: Blending Knowledge, Science, and Dharmic Design for a Sustainable Future"
           </p>
-          <p className="text-lg sm:text-xl font-bold mt-4 text-gray-900">
-            5<sup>th</sup> October Morning, At IIT Mandi
-          </p>
         </section>
 
-        
+
 
         {/* Eminent Speakers Section */}
         <section className="my-16">
@@ -161,7 +155,7 @@ const ChintanShivir = () => {
         </section>
 
         {/* Footer Section */}
-        
+
       </div>
     </div>
   );
